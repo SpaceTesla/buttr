@@ -13,7 +13,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="fixed flex w-full items-center justify-between bg-white p-6">
+    <div className="fixed z-50 flex w-full items-center justify-between bg-white p-6">
       <div className="absolute -left-[280px] -top-[430px] z-10 h-[560px] w-[560px] rounded-full bg-buttr-green"></div>
       <div className="nav-left z-30">
         <Link href="/">

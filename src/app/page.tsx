@@ -6,10 +6,10 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="h-[calc(100vh-5.5rem)] pt-[5.5rem]">
+    <main className="h-[calc(100vh-5.5rem)] overflow-x-clip pt-[5.5rem]">
       <div className="grid h-full min-h-full lg:grid-cols-4">
         {/* Left column - Benefits */}
-        <div className="col-span-1 flex h-full flex-col items-start justify-center gap-8 py-8 pl-4">
+        <div className="col-span-1 flex h-full flex-col items-start justify-center gap-8 py-8 pl-4 pr-4">
           <Point
             icon={'icon'}
             heading={'Saving Water'}
@@ -39,8 +39,8 @@ export default function Home() {
               <Image
                 src={Paper}
                 alt="BUTTR Paper Stack"
-                width={600}
-                height={600}
+                width={800}
+                height={800}
                 className="object-contain"
               />
               <div className="absolute inset-0 left-[6em] flex -rotate-[28deg] flex-col items-center justify-center gap-4 md:left-[8em]">
