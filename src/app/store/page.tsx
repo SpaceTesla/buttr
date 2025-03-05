@@ -195,24 +195,24 @@ export default function StorePage() {
                 </div>
                 <div className="p-4">
                   <h3 className="mb-2 text-lg font-semibold">{product.name}</h3>
-                  <div className="mb-2 flex items-center">
-                    <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="h-4 w-4"
-                          fill={
-                            i < Math.floor(product.rating)
-                              ? 'currentColor'
-                              : 'none'
-                          }
-                        />
-                      ))}
-                    </div>
-                    <span className="ml-2 text-sm text-gray-600">
-                      {product.rating}
-                    </span>
-                  </div>
+                  {/*<div className="mb-2 flex items-center">*/}
+                  {/*  <div className="flex text-yellow-400">*/}
+                  {/*    {[...Array(5)].map((_, i) => (*/}
+                  {/*      <Star*/}
+                  {/*        key={i}*/}
+                  {/*        className="h-4 w-4"*/}
+                  {/*        fill={*/}
+                  {/*          i < Math.floor(product.rating)*/}
+                  {/*            ? 'currentColor'*/}
+                  {/*            : 'none'*/}
+                  {/*        }*/}
+                  {/*      />*/}
+                  {/*    ))}*/}
+                  {/*  </div>*/}
+                  {/*  <span className="ml-2 text-sm text-gray-600">*/}
+                  {/*    {product.rating}*/}
+                  {/*  </span>*/}
+                  {/*</div>*/}
                   <p className="mb-4 text-sm text-gray-600">
                     {product.description}
                   </p>
@@ -236,12 +236,12 @@ export default function StorePage() {
                     ))}
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-xl font-bold">
-                      ${product.price.toFixed(2)}
-                    </span>
+                    {/*<span className="text-xl font-bold">*/}
+                    {/*  ${product.price.toFixed(2)}*/}
+                    {/*</span>*/}
                     <button className="inline-flex items-center rounded-md bg-primary px-3 py-2 text-white transition-colors hover:bg-primary/90">
                       <ShoppingCart className="mr-2 h-4 w-4" />
-                      Add to Cart
+                      Shop on Amazon
                     </button>
                   </div>
                 </div>
@@ -300,68 +300,68 @@ export default function StorePage() {
               </div>
 
               {/* Price Range */}
-              <div className="mb-6">
-                <h4 className="mb-2 font-medium">Price Range</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <input
-                      id="price-all"
-                      name="price"
-                      type="radio"
-                      defaultChecked
-                      className="h-4 w-4 border-gray-300 text-primary focus:ring-primary"
-                    />
-                    <label
-                      htmlFor="price-all"
-                      className="ml-2 text-sm text-gray-700"
-                    >
-                      All Prices
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      id="price-under-10"
-                      name="price"
-                      type="radio"
-                      className="h-4 w-4 border-gray-300 text-primary focus:ring-primary"
-                    />
-                    <label
-                      htmlFor="price-under-10"
-                      className="ml-2 text-sm text-gray-700"
-                    >
-                      Under $10
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      id="price-10-20"
-                      name="price"
-                      type="radio"
-                      className="h-4 w-4 border-gray-300 text-primary focus:ring-primary"
-                    />
-                    <label
-                      htmlFor="price-10-20"
-                      className="ml-2 text-sm text-gray-700"
-                    >
-                      $10 - $20
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      id="price-over-20"
-                      name="price"
-                      type="radio"
-                      className="h-4 w-4 border-gray-300 text-primary focus:ring-primary"
-                    />
-                    <label
-                      htmlFor="price-over-20"
-                      className="ml-2 text-sm text-gray-700"
-                    >
-                      Over $20
-                    </label>
-                  </div>
-                </div>
-              </div>
+              {/*<div className="mb-6">*/}
+              {/*  <h4 className="mb-2 font-medium">Price Range</h4>*/}
+              {/*  <div className="space-y-2">*/}
+              {/*    <div className="flex items-center">*/}
+              {/*      <input*/}
+              {/*        id="price-all"*/}
+              {/*        name="price"*/}
+              {/*        type="radio"*/}
+              {/*        defaultChecked*/}
+              {/*        className="h-4 w-4 border-gray-300 text-primary focus:ring-primary"*/}
+              {/*      />*/}
+              {/*      <label*/}
+              {/*        htmlFor="price-all"*/}
+              {/*        className="ml-2 text-sm text-gray-700"*/}
+              {/*      >*/}
+              {/*        All Prices*/}
+              {/*      </label>*/}
+              {/*    </div>*/}
+              {/*    <div className="flex items-center">*/}
+              {/*      <input*/}
+              {/*        id="price-under-10"*/}
+              {/*        name="price"*/}
+              {/*        type="radio"*/}
+              {/*        className="h-4 w-4 border-gray-300 text-primary focus:ring-primary"*/}
+              {/*      />*/}
+              {/*      <label*/}
+              {/*        htmlFor="price-under-10"*/}
+              {/*        className="ml-2 text-sm text-gray-700"*/}
+              {/*      >*/}
+              {/*        Under $10*/}
+              {/*      </label>*/}
+              {/*    </div>*/}
+              {/*    <div className="flex items-center">*/}
+              {/*      <input*/}
+              {/*        id="price-10-20"*/}
+              {/*        name="price"*/}
+              {/*        type="radio"*/}
+              {/*        className="h-4 w-4 border-gray-300 text-primary focus:ring-primary"*/}
+              {/*      />*/}
+              {/*      <label*/}
+              {/*        htmlFor="price-10-20"*/}
+              {/*        className="ml-2 text-sm text-gray-700"*/}
+              {/*      >*/}
+              {/*        $10 - $20*/}
+              {/*      </label>*/}
+              {/*    </div>*/}
+              {/*    <div className="flex items-center">*/}
+              {/*      <input*/}
+              {/*        id="price-over-20"*/}
+              {/*        name="price"*/}
+              {/*        type="radio"*/}
+              {/*        className="h-4 w-4 border-gray-300 text-primary focus:ring-primary"*/}
+              {/*      />*/}
+              {/*      <label*/}
+              {/*        htmlFor="price-over-20"*/}
+              {/*        className="ml-2 text-sm text-gray-700"*/}
+              {/*      >*/}
+              {/*        Over $20*/}
+              {/*      </label>*/}
+              {/*    </div>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
 
               {/* Features */}
               <div>
@@ -503,24 +503,24 @@ export default function StorePage() {
                     <h3 className="mb-2 text-lg font-semibold">
                       {product.name}
                     </h3>
-                    <div className="mb-2 flex items-center">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="h-4 w-4"
-                            fill={
-                              i < Math.floor(product.rating)
-                                ? 'currentColor'
-                                : 'none'
-                            }
-                          />
-                        ))}
-                      </div>
-                      <span className="ml-2 text-sm text-gray-600">
-                        {product.rating}
-                      </span>
-                    </div>
+                    {/*<div className="mb-2 flex items-center">*/}
+                    {/*  <div className="flex text-yellow-400">*/}
+                    {/*    {[...Array(5)].map((_, i) => (*/}
+                    {/*      <Star*/}
+                    {/*        key={i}*/}
+                    {/*        className="h-4 w-4"*/}
+                    {/*        fill={*/}
+                    {/*          i < Math.floor(product.rating)*/}
+                    {/*            ? 'currentColor'*/}
+                    {/*            : 'none'*/}
+                    {/*        }*/}
+                    {/*      />*/}
+                    {/*    ))}*/}
+                    {/*  </div>*/}
+                    {/*  <span className="ml-2 text-sm text-gray-600">*/}
+                    {/*    {product.rating}*/}
+                    {/*  </span>*/}
+                    {/*</div>*/}
                     <div className="mb-4 flex flex-wrap gap-2">
                       {product.tags.map((tag, index) => (
                         <span
@@ -541,12 +541,12 @@ export default function StorePage() {
                       ))}
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-xl font-bold">
-                        ${product.price.toFixed(2)}
-                      </span>
+                      {/*<span className="text-xl font-bold">*/}
+                      {/*  ${product.price.toFixed(2)}*/}
+                      {/*</span>*/}
                       <button className="inline-flex items-center rounded-md bg-primary px-3 py-2 text-white transition-colors hover:bg-primary/90">
                         <ShoppingCart className="mr-2 h-4 w-4" />
-                        Add to Cart
+                        Shop on Amazon
                       </button>
                     </div>
                   </div>
