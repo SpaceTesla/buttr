@@ -11,7 +11,7 @@ export default function Home() {
         {/* Left column - Benefits */}
         <div className="col-span-3 flex h-full flex-col items-start justify-center gap-8 py-8 pl-4 pr-4">
           <Point
-            icon={'icon'}
+            icon={'/gifs/water-saving.gif'}
             heading={'Saving Water'}
             description={
               'With every ream you save 70 litres of water when compared to traditional paper'
@@ -19,14 +19,14 @@ export default function Home() {
             // className={'pl-[1vw]'}
           />
           <Point
-            icon={'icon'}
+            icon={'/gifs/book.gif'}
             heading={'Saving Trees'}
             description={
               'With every ream you prevent 1 tree from being cut for paper production'
             }
           />
           <Point
-            icon={'icon'}
+            icon={'/gifs/save-the-world.gif'}
             heading={'Saving Earth'}
             description={
               'With every ream you offset 200 Kgs of carbon footprint helping avert global warming'
