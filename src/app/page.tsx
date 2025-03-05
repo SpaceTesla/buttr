@@ -59,7 +59,7 @@ export default function Home() {
                     Know More
                   </Link>
                   <Link
-                    href={'/shop'}
+                    href={'/store'}
                     className={
                       'text-[1em] font-black uppercase transition hover:scale-105 hover:text-buttr-green hover:drop-shadow md:text-[1.25em]'
                     }
