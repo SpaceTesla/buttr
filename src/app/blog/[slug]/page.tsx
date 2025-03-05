@@ -1,55 +1,52 @@
-import { getBlogPostBySlug, getBlogPosts } from '@/data/blog-data';
+'use client';
+
+import { useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { CalendarIcon, UserIcon } from 'lucide-react';
 import { remark } from 'remark';
 import html from 'remark-html';
-
-export async function generateStaticParams() {
-  const posts = getBlogPosts();
-  return posts.map((post) => ({ slug: post.slug }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const post = await getBlogPostBySlug(params.slug);
-  if (!post) {
-    return {
-      title: 'Post Not Found | BUTTR Blog',
-      description: 'The requested blog post could not be found',
-    };
-  }
-  return {
-    title: `${post.title} | BUTTR Blog`,
-    description: post.excerpt,
-  };
-}
+import { use } from 'react';
+import { BlogPost } from '@/data/blog-data';
 
 const markdownToHtml = async (markdown: string) => {
   const processedContent = await remark().use(html).process(markdown);
   return processedContent.toString();
 };
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const post = await getBlogPostBySlug(params.slug);
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default function BlogPostPage({ params }: PageProps) {
+  const { slug } = use(params);
+  const [post, setPost] = useState<BlogPost | null>(null);
+  const [formattedContent, setFormattedContent] = useState<string>('');
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      const res = await fetch(`/api/blog/${slug}`);
+      if (!res.ok) {
+        notFound();
+        return;
+      }
+      const data: BlogPost = await res.json();
+      setPost(data);
+      const content = await markdownToHtml(data.content);
+      setFormattedContent(content);
+    };
+
+    fetchPost();
+  }, [slug]);
 
   if (!post) {
-    notFound();
+    return <div>Loading...</div>;
   }
 
-  const formattedContent = await markdownToHtml(post.content);
-
   return (
-    <div className="container mx-auto h-[calc(100vh-5.5rem)] bg-white px-4 py-8 pt-[5.5rem]">
-      <div className="bg-buttr-yellow mx-auto my-4 max-w-6xl overflow-hidden shadow-xl shadow-gray-600">
-        <div className="px-4 py-6 text-center">
+    <div className="container mx-auto bg-white px-4 py-8 pt-[5.5rem]">
+      <div className="mx-auto my-4 max-w-6xl overflow-hidden rounded-lg bg-buttr-yellow shadow-xl shadow-gray-400">
+        <div className="px-4 py-8 text-center">
           <div
             className="font-chomsky text-5xl md:text-6xl lg:text-7xl"
             style={{ fontFamily: 'Chomsky' }}
@@ -58,7 +55,7 @@ export default async function BlogPostPage({
           </div>
           <div className="my-4 h-px w-full bg-black"></div>
         </div>
-        <article className="prose mx-auto max-w-3xl pb-8">
+        <article className="prose mx-auto max-w-3xl pb-32">
           <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
 
           <div className="mb-6 flex items-center text-muted-foreground">

@@ -117,6 +117,6 @@ export function getBlogPosts() {
   return blogPosts;
 }
 
-export async function getBlogPostBySlug(slug: string) {
+export function getBlogPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
