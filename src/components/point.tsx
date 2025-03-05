@@ -18,6 +18,7 @@ const Point: React.FC<PointProps> = ({
 }) => {
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [firstFrame, setFirstFrame] = useState<string | null>(null);
+  const [isIconHovering, setIsIconHovering] = useState(false);
 
   useEffect(() => {
     if (icon.endsWith('.gif')) {
@@ -34,10 +35,6 @@ const Point: React.FC<PointProps> = ({
     }
   }, [icon]);
 
-  // Separate hover states for icon and component
-  const [isIconHovering, setIsIconHovering] = useState(false);
-  const [isComponentHovering, setIsComponentHovering] = useState(false);
-
   // When icon is hovered, make text visible and keep it visible
   useEffect(() => {
     if (isIconHovering) {
@@ -46,18 +43,14 @@ const Point: React.FC<PointProps> = ({
   }, [isIconHovering]);
 
   return (
-    <div
-      className={`point flex items-center justify-center ${className}`}
-      onMouseEnter={() => setIsComponentHovering(true)}
-      onMouseLeave={() => setIsComponentHovering(false)}
-    >
+    <div className={`point flex items-center justify-center ${className}`}>
       <div
         className="icon flex min-h-16 min-w-16 items-center justify-center text-sm font-bold uppercase"
         onMouseEnter={() => setIsIconHovering(true)}
         onMouseLeave={() => setIsIconHovering(false)}
       >
         <div className="relative">
-          {!isComponentHovering && firstFrame ? (
+          {!isIconHovering && firstFrame ? (
             <Image src={firstFrame} alt={'icon'} width={80} height={80} />
           ) : (
             <Image
