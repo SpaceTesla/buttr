@@ -45,17 +45,17 @@ export default function BlogPostPage({ params }: PageProps) {
 
   return (
     <div className="container mx-auto bg-white px-4 py-8 pt-[5.5rem]">
-      <div className="mx-auto my-4 max-w-6xl overflow-hidden rounded-lg bg-buttr-yellow shadow-xl shadow-gray-400">
-        <div className="px-4 py-8 text-center">
+      <div className="mx-auto my-4 max-w-6xl overflow-hidden bg-buttr-yellow shadow-xl shadow-gray-400">
+        <div className="py-8 text-center">
           <div
             className="font-chomsky text-5xl md:text-6xl lg:text-7xl"
             style={{ fontFamily: 'Chomsky' }}
           >
             Buttr Times
           </div>
-          <div className="my-4 h-px w-full bg-black"></div>
+          <div className="my-4 h-0.5 w-full bg-black"></div>
         </div>
-        <article className="prose mx-auto max-w-3xl pb-32">
+        <article className="prose mx-auto max-w-3xl px-2 pb-32">
           <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
 
           <div className="mb-6 flex items-center text-muted-foreground">

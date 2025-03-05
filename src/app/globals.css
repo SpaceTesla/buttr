@@ -55,9 +55,9 @@
     --radius: 0.5rem;
 
     /*Custom design*/
-    --buttr-green: 103, 63%, 46%;
+    --buttr-green: 103 63% 46%;
 
-    --buttr-yellow: 37, 100%, 97%;
+    --buttr-yellow: 37 100% 97%;
 
     --font-montserrat: 'Montserrat', sans-serif; /* Added custom property */
   }

@@ -196,9 +196,9 @@ export default function AboutPage() {
         </h2>
         <div className="relative">
           {/* Process timeline */}
-          <div className="absolute left-1/2 hidden h-full w-1 -translate-x-1/2 transform bg-primary/20 md:block"></div>
-
+          <div className="absolute left-1/2 -z-10 hidden h-full w-1 -translate-x-1/2 transform bg-buttr-green/20 md:block"></div>
           <div className="space-y-12">
+            {/* Process 1 - Left */}
             <div className="flex flex-col items-center md:flex-row">
               <div className="md:w-1/2 md:pr-12 md:text-right">
                 <h3 className="mb-3 text-xl font-semibold">
@@ -215,11 +215,12 @@ export default function AboutPage() {
                   1
                 </div>
               </div>
-              <div className="md:hidden md:w-1/2 md:pl-12"></div>
+              <div className="hidden md:block md:w-1/2"></div>
             </div>
 
+            {/* Process 2 - Right */}
             <div className="flex flex-col items-center md:flex-row">
-              <div className="md:hidden md:w-1/2 md:pr-12 md:text-right"></div>
+              <div className="hidden md:block md:w-1/2"></div>
               <div className="my-4 flex justify-center md:my-0 md:w-12">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">
                   2
@@ -238,6 +239,7 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Process 3 - Left */}
             <div className="flex flex-col items-center md:flex-row">
               <div className="md:w-1/2 md:pr-12 md:text-right">
                 <h3 className="mb-3 text-xl font-semibold">
@@ -255,11 +257,12 @@ export default function AboutPage() {
                   3
                 </div>
               </div>
-              <div className="md:hidden md:w-1/2 md:pl-12"></div>
+              <div className="hidden md:block md:w-1/2"></div>
             </div>
 
+            {/* Process 4 - Right */}
             <div className="flex flex-col items-center md:flex-row">
-              <div className="md:hidden md:w-1/2 md:pr-12 md:text-right"></div>
+              <div className="hidden md:block md:w-1/2"></div>
               <div className="my-4 flex justify-center md:my-0 md:w-12">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">
                   4
@@ -278,6 +281,7 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Process 5 - Left */}
             <div className="flex flex-col items-center md:flex-row">
               <div className="md:w-1/2 md:pr-12 md:text-right">
                 <h3 className="mb-3 text-xl font-semibold">
@@ -295,14 +299,14 @@ export default function AboutPage() {
                   5
                 </div>
               </div>
-              <div className="md:hidden md:w-1/2 md:pl-12"></div>
+              <div className="hidden md:block md:w-1/2"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Environmental Impact */}
-      <section className="bg-primary/5 py-16">
+      <section className="bg-buttr-green/5 py-16">
         <div className="container mx-auto px-4">
           <h2 className="mb-8 text-center text-3xl font-bold">
             Our Environmental Impact
