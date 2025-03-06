@@ -9,14 +9,14 @@ export default function Home() {
     <main className="h-[calc(100vh-5.5rem)] overflow-x-clip pt-[5.5rem]">
       <div className="grid h-full min-h-full lg:grid-cols-9">
         {/* Left column - Benefits */}
-        <div className="col-span-3 flex h-full flex-col items-start justify-center gap-8 py-8 pl-4 pr-4">
+        <div className="col-span-3 flex h-full flex-col items-start justify-center gap-8 py-8 pl-4 pr-4 lg:pr-16">
           <Point
             icon={'/gifs/water-saving.gif'}
             heading={'Saving Water'}
             description={
               'With every ream you save 70 litres of water when compared to traditional paper'
             }
-            // className={'pl-[1vw]'}
+            className={'xl:pl-2'}
           />
           <Point
             icon={'/gifs/book.gif'}
@@ -31,12 +31,13 @@ export default function Home() {
             description={
               'With every ream you offset 200 Kgs of carbon footprint helping avert global warming'
             }
+            className={'xl:pl-2'}
           />
         </div>
         {/* Right column - Paper Image and Tagline */}
-        <div className="relative col-span-6 flex flex-col justify-center md:justify-start">
-          <div className="relative -left-4 top-[50%] inline-block h-min w-fit -translate-y-1/2 transform">
-            <div className="relative flex max-h-[37.5rem] max-w-[37.5rem] rounded-full after:absolute after:left-[50%] after:top-[50%] after:-z-10 after:h-[90%] after:w-[90%] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:bg-buttr-green">
+        <div className="relative col-span-6 flex flex-col justify-center md:justify-center lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 xl:max-h-[40rem] xl:max-w-[40rem]">
+          <div className="relative flex h-min w-full items-center justify-center">
+            <div className="relative flex max-h-[37.5rem] max-w-[37.5rem] rounded-full after:absolute after:left-[50%] after:top-[50%] after:-z-10 after:h-[90%] after:w-[90%] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:bg-buttr-green xl:max-h-[50rem] xl:max-w-[50rem]">
               <Image
                 src={Paper}
                 alt="BUTTR Paper Stack"
@@ -76,13 +77,13 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            </div>
-            <div className="relative -top-1/4 flex md:-top-1/3 md:left-24">
-              <h2 className="line-height-0.5 ml-auto px-2 text-3xl font-bold leading-none text-gray-900 md:text-5xl">
-                From Bin
-                <br />
-                To Pin
-              </h2>
+              <div className="absolute bottom-12 right-4 flex items-end justify-start md:-right-16 md:bottom-32">
+                <h2 className="line-height-0.5 px-2 text-2xl font-bold leading-none text-gray-900 md:text-4xl xl:text-5xl">
+                  From Bin
+                  <br />
+                  To Pin
+                </h2>
+              </div>
             </div>
           </div>
         </div>

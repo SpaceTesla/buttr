@@ -43,7 +43,9 @@ const Point: React.FC<PointProps> = ({
   }, [isIconHovering]);
 
   return (
-    <div className={`point flex items-center justify-center ${className}`}>
+    <div
+      className={`point flex items-center justify-center gap-1 ${className}`}
+    >
       <div
         className="icon flex min-h-16 min-w-16 items-center justify-center text-sm font-bold uppercase"
         onMouseEnter={() => setIsIconHovering(true)}
@@ -74,7 +76,7 @@ const Point: React.FC<PointProps> = ({
           {heading}
         </div>
         <div
-          className={`description lg:transform lg:transition-transform lg:delay-100 lg:duration-700 ${
+          className={`description text-sm lg:transform lg:transition-transform lg:delay-100 lg:duration-700 ${
             isTextVisible
               ? 'lg:translate-x-0'
               : 'lg:-translate-x-full lg:opacity-0'
