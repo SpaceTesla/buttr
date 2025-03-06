@@ -11,7 +11,7 @@ export default function BlogPage() {
   const posts = getBlogPosts();
 
   return (
-    <main className="container mx-auto px-4 py-12 pt-[5.5rem]">
+    <main className="container mx-auto px-4 py-12 pt-[5rem]">
       <div className="container mx-auto bg-white px-4 py-8">
         <div className="mx-auto my-4 max-w-6xl overflow-hidden bg-buttr-yellow pb-8 shadow-xl shadow-gray-400">
           <div className="px-8 py-6 text-center">

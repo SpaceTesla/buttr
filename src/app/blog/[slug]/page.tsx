@@ -44,7 +44,7 @@ export default function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <div className="container mx-auto bg-white px-4 py-8 pt-[5.5rem]">
+    <div className="container mx-auto bg-white px-4 py-8 pt-[5rem]">
       <div className="mx-auto my-4 max-w-6xl overflow-hidden bg-buttr-yellow shadow-xl shadow-gray-400">
         <div className="px-8 py-6 text-center">
           <div

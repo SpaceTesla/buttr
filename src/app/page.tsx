@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="h-[calc(100vh-5.5rem)] overflow-x-clip pt-[5.5rem]">
+    <main className="h-[calc(100vh-5rem)] overflow-x-clip pt-[5rem]">
       <div className="grid h-full min-h-full lg:grid-cols-9">
         {/* Left column - Benefits */}
         <div className="col-span-3 flex h-full flex-col items-start justify-center gap-8 py-8 pl-4 pr-4 lg:pr-16">

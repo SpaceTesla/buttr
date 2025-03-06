@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="h-[calc(100vh-5.5rem)] bg-white pt-[5.5rem]">
+    <div className="h-[calc(100vh-5rem)] bg-white pt-[5rem]">
       {/* Hero Section */}
       <section className="relative">
         <div className="absolute inset-0 z-0 bg-[#ebf5ec]"></div>

@@ -145,7 +145,7 @@ const categories = Array.from(
 
 export default function StorePage() {
   return (
-    <div className="bg-white pt-[5.5rem]">
+    <div className="bg-white pt-[5rem]">
       {/* Hero Section */}
       <section className="bg-primary/10 py-12">
         <div className="container mx-auto px-4">
