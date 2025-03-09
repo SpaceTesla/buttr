@@ -8,6 +8,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import { use } from 'react';
 import { BlogPost } from '@/data/blog-data';
+import axios from 'axios';
 
 const markdownToHtml = async (markdown: string) => {
   const processedContent = await remark().use(html).process(markdown);
@@ -25,15 +26,16 @@ export default function BlogPostPage({ params }: PageProps) {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const res = await fetch(`/api/blog/${slug}`);
-      if (!res.ok) {
+      try {
+        const res = await axios.get(`/api/blog/${slug}`);
+        const data: BlogPost = res.data;
+        setPost(data);
+        const content = await markdownToHtml(data.content);
+        setFormattedContent(content);
+      } catch (error) {
+        console.error('Error fetching blog post:', error);
         notFound();
-        return;
       }
-      const data: BlogPost = await res.json();
-      setPost(data);
-      const content = await markdownToHtml(data.content);
-      setFormattedContent(content);
     };
 
     fetchPost();
