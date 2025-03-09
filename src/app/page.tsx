@@ -4,6 +4,12 @@ import Socials from '@/components/socials';
 import Point from '@/components/point';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'BUTTR | Sustainable Papers',
+  description:
+    '100% Recycled, Tree-Free, Uber-Smooth, FSC Certified, and Premium Quality Papers for High-Speed Printing and Writing.',
+};
+
 export default function Home() {
   return (
     <main className="h-[calc(100vh-5rem)] overflow-x-clip pt-[5rem]">
