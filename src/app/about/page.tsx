@@ -12,7 +12,7 @@ export default function AboutPage() {
     <div className="h-[calc(100vh-5rem)] bg-white pt-[5rem]">
       {/* Hero Section */}
       <section className="relative">
-        <div className="absolute inset-0 z-0 bg-[#ebf5ec]"></div>
+        <div className="absolute inset-0 z-0 bg-buttr-green/10"></div>
         <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-6 text-4xl font-bold md:text-5xl">About BUTTR</h1>
@@ -84,7 +84,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg bg-white p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-buttr-green/10">
                 <Recycle className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-3 text-xl font-semibold">100% Recycled</h3>
@@ -96,7 +96,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-buttr-green/10">
                 <Leaf className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-3 text-xl font-semibold">Tree-Free</h3>
@@ -108,7 +108,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-buttr-green/10">
                 <Award className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-3 text-xl font-semibold">FSC Certified</h3>
@@ -120,7 +120,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-buttr-green/10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -147,7 +147,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-buttr-green/10">
                 <Printer className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-3 text-xl font-semibold">
@@ -161,7 +161,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-buttr-green/10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -211,7 +211,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="my-4 flex justify-center md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   1
                 </div>
               </div>
@@ -222,7 +222,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center md:flex-row">
               <div className="hidden md:block md:w-1/2"></div>
               <div className="my-4 flex justify-center md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   2
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="my-4 flex justify-center md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   3
                 </div>
               </div>
@@ -264,7 +264,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center md:flex-row">
               <div className="hidden md:block md:w-1/2"></div>
               <div className="my-4 flex justify-center md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   4
                 </div>
               </div>
@@ -295,7 +295,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="my-4 flex justify-center md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   5
                 </div>
               </div>
