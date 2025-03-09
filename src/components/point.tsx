@@ -53,7 +53,13 @@ const Point: React.FC<PointProps> = ({
       >
         <div className="relative">
           {!isIconHovering && firstFrame ? (
-            <Image src={firstFrame} alt={'icon'} width={80} height={80} />
+            <Image
+              src={firstFrame}
+              alt={'icon'}
+              width={80}
+              height={80}
+              unoptimized
+            />
           ) : (
             <Image
               src={icon}
@@ -61,6 +67,7 @@ const Point: React.FC<PointProps> = ({
               width={80}
               height={80}
               priority={!firstFrame}
+              unoptimized
             />
           )}
         </div>

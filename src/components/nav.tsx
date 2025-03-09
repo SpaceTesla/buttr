@@ -14,9 +14,9 @@ const Nav = () => {
   };
 
   return (
-    <div className="fixed z-50 flex h-20 w-full items-center justify-between bg-white px-6 shadow-sm">
+    <div className="fixed z-50 flex h-20 w-full items-center justify-between bg-buttr-green px-6 shadow-sm md:bg-white">
       {/* Decorative circle - responsive positioning */}
-      <div className="absolute -left-[280px] -top-[440px] z-10 h-[560px] w-[560px] rounded-full bg-buttr-green"></div>
+      <div className="absolute -left-[280px] -top-[440px] z-10 hidden h-[560px] w-[560px] rounded-full bg-buttr-green md:block"></div>
 
       <div className="nav-left relative z-30">
         <Link href="/">
@@ -71,7 +71,7 @@ const Nav = () => {
         className={`fixed inset-0 z-20 transform bg-white transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
-        style={{ top: '64px' }}
+        style={{ top: '80px' }}
       >
         <div className="flex h-full flex-col items-center justify-start gap-8 p-8 pt-12">
           <Link
@@ -104,7 +104,7 @@ const Nav = () => {
           </Link>
           <Link
             href="/contact"
-            className="mt-4 bg-buttr-green px-8 py-3 text-center text-lg uppercase"
+            className="w-full border-b border-gray-100 pb-2 text-center text-lg font-medium transition hover:text-buttr-green"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us
