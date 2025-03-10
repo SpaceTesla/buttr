@@ -198,9 +198,9 @@ export default function AboutPage() {
           {/* Process timeline */}
           <div className="absolute left-1/2 -z-10 hidden h-full w-1 -translate-x-1/2 transform bg-buttr-green/20 md:block"></div>
           <div className="space-y-12">
-            {/* Process 1 - Left */}
+            {/* Process 1 */}
             <div className="flex flex-col items-center md:flex-row">
-              <div className="md:w-1/2 md:pr-12 md:text-right">
+              <div className="order-2 md:order-1 md:w-1/2 md:pr-12 md:text-right">
                 <h3 className="mb-3 text-xl font-semibold">
                   Collection & Sorting
                 </h3>
@@ -210,23 +210,23 @@ export default function AboutPage() {
                   quality and remove contaminants.
                 </p>
               </div>
-              <div className="my-4 flex justify-center md:my-0 md:w-12">
+              <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   1
                 </div>
               </div>
-              <div className="hidden md:block md:w-1/2"></div>
+              <div className="hidden md:order-3 md:block md:w-1/2"></div>
             </div>
 
-            {/* Process 2 - Right */}
+            {/* Process 2 */}
             <div className="flex flex-col items-center md:flex-row">
-              <div className="hidden md:block md:w-1/2"></div>
-              <div className="my-4 flex justify-center md:my-0 md:w-12">
+              <div className="hidden md:order-1 md:block md:w-1/2"></div>
+              <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   2
                 </div>
               </div>
-              <div className="md:w-1/2 md:pl-12">
+              <div className="order-2 md:order-3 md:w-1/2 md:pl-12">
                 <h3 className="mb-3 text-xl font-semibold">
                   Pulping & Cleaning
                 </h3>
@@ -239,9 +239,9 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Process 3 - Left */}
+            {/* Process 3 */}
             <div className="flex flex-col items-center md:flex-row">
-              <div className="md:w-1/2 md:pr-12 md:text-right">
+              <div className="order-2 md:order-1 md:w-1/2 md:pr-12 md:text-right">
                 <h3 className="mb-3 text-xl font-semibold">
                   Refining & Smoothing
                 </h3>
@@ -252,23 +252,23 @@ export default function AboutPage() {
                   quality.
                 </p>
               </div>
-              <div className="my-4 flex justify-center md:my-0 md:w-12">
+              <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   3
                 </div>
               </div>
-              <div className="hidden md:block md:w-1/2"></div>
+              <div className="hidden md:order-3 md:block md:w-1/2"></div>
             </div>
 
-            {/* Process 4 - Right */}
+            {/* Process 4 */}
             <div className="flex flex-col items-center md:flex-row">
-              <div className="hidden md:block md:w-1/2"></div>
-              <div className="my-4 flex justify-center md:my-0 md:w-12">
+              <div className="hidden md:order-1 md:block md:w-1/2"></div>
+              <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   4
                 </div>
               </div>
-              <div className="md:w-1/2 md:pl-12">
+              <div className="order-2 md:order-3 md:w-1/2 md:pl-12">
                 <h3 className="mb-3 text-xl font-semibold">
                   Sheet Formation & Drying
                 </h3>
@@ -281,9 +281,9 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Process 5 - Left */}
+            {/* Process 5 */}
             <div className="flex flex-col items-center md:flex-row">
-              <div className="md:w-1/2 md:pr-12 md:text-right">
+              <div className="order-2 md:order-1 md:w-1/2 md:pr-12 md:text-right">
                 <h3 className="mb-3 text-xl font-semibold">
                   Quality Control & Packaging
                 </h3>
@@ -294,15 +294,15 @@ export default function AboutPage() {
                   sustainability from start to finish.
                 </p>
               </div>
-              <div className="my-4 flex justify-center md:my-0 md:w-12">
+              <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   5
                 </div>
               </div>
-              <div className="hidden md:block md:w-1/2"></div>
+              <div className="hidden md:order-3 md:block md:w-1/2"></div>
             </div>
           </div>
-        </div>
+        </div>{' '}
       </section>
 
       {/* Environmental Impact */}
