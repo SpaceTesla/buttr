@@ -2,58 +2,69 @@
 
 ## About BUTTR
 
+BUTTR is an innovative company founded by Naman Gupta that tackles one of the world's most pervasive pollution problems: cigarette butts. These discarded items are the world's most littered single-use plastic, containing microplastics that take over 10 years to decompose and pose serious threats to water bodies and ecosystems.
+
+The company collects cigarette butts and transforms them into sustainable products through an innovative recycling process. This not only prevents harmful waste from entering landfills and waterways but also creates valuable, eco-friendly products.
+
 "अयं बन्धुरयं नेति गणना लघुचेतसाम् । उदारचरितानां तु वसुधैव कुटुम्बकम् ॥"
 — Mahopanishad, Verse 6.72
 
 "The distinction of 'this person is mine, this one is not' is made only by the small-minded. For those of noble character, the entire world is one family."
 
-The central idea upholds the value of all life, including that of humans, animals, plants and microorganisms, as well as the interdependence of these species both within and outside of our world.
+This central philosophy guides BUTTR's mission to protect all life forms through sustainable practices and waste reduction.
 
-About 95 trees are cut every second to make paper and paper packaging. The number of sustainable papers available in the market, especially for regular printing and packaging, is limited. Big paper manufacturers usually refuse to offer sustainable papers to clients, and even if they do, demand exorbitant prices.
+## Impact and Achievements
 
-Earlier, people had to pay a premium price for low-grade recycled papers. The quality, the colors, and the high prices were a problem for everyone. There was no control over prices, and people had no other option. Apart from this, the situation is worse for the packaging industry as it is hard to find affordable recycled paper.
+- **Recycled**: Over 10 billion cigarette butts
+- **Water Saved**: Over 250 billion gallons
+- **Environmental Protection**: Prevented microplastics from polluting water systems
 
-BUTTR Sustainable Papers are 100% recycled uber-smooth paper sheets precisely cut for high-speed printing and are compatible with all printers and inks. Our papers are affordable, biodegradable, premium-quality, and tree-free. We provide 100% traceability, offer last-mile delivery, and save 15% of paper procurement costs for our valued clients.
+## Products Made from Recycled Cigarette Butts
 
-## Sustainability Metrics
+BUTTR transforms cigarette waste into various sustainable products including:
 
-- **Trees Saved**: 1.2M+
-- **Water Conserved**: 3.5M+ gallons
-- **Energy Saved**: 850K+ kWh
+- Sustainable papers
+- Textiles
+- Stuffed toys
+- Mannequins
 
-## Production Process
+BUTTR Sustainable Papers are 100% recycled, uber-smooth paper sheets precisely cut for high-speed printing and compatible with all printers and inks. These papers are affordable, biodegradable, premium-quality, and tree-free.
 
-1. We source sustainable bamboo and agricultural waste
-2. Our materials require 80% less water than traditional paper
-3. We use renewable energy in our production facilities
-4. Our packaging is 100% biodegradable
-5. We minimize waste through efficient manufacturing
+## How to Contribute
+
+If you know smokers or have cigarette butts at home or office, you can collect them and send them to BUTTR for recycling. This small action contributes to a larger environmental solution.
+
+We all have a role to play in addressing this environmental challenge:
+
+- Be the solution
+- Contribute to the solution
+- Support the solution
+
+## Business Benefits
+
+We provide 100% traceability, offer last-mile delivery, and save 15% of paper procurement costs for our valued clients. Our approach helps businesses reduce their environmental footprint while maintaining quality.
 
 ## FAQs
 
 ### What makes BUTTR sustainable?
 
-We use bamboo and agricultural waste instead of trees, reducing deforestation and water usage. Our papers are 100% recycled, biodegradable, premium-quality, and tree-free.
+We recycle cigarette butts - the world's most littered single-use plastic - and transform them into useful products, preventing microplastics from entering water systems.
 
 ### Where is BUTTR made?
 
-Our products are manufactured in facilities powered by renewable energy. Our main location is in Noida, India.
+Our products are manufactured in facilities in Noida, India.
 
 ### Do you offer bulk discounts?
 
 Yes, we offer discounts for orders over $100. Contact our sales team for details.
 
-### What is the environmental impact of paper production in India?
+### What environmental issues does BUTTR address?
 
-India has the second highest deforestation rate in the world, losing over 600,000 hectares of forest cover annually. The paper and paper packaging industry is a major contributor to this deforestation, with approximately 95 trees cut every second to produce paper and paper packaging products.
+Cigarette butts contain microplastics that take over 10 years to decompose and pose serious threats to water bodies and ecosystems. By recycling them, we prevent this pollution while creating sustainable alternatives to traditional products.
 
 ### Do you offer services for businesses?
 
-Yes, we provide 100% traceability, offer last-mile delivery, and help businesses save up to 15% on paper procurement costs. We work with companies of all sizes and can accommodate both regular and specialized paper needs for various applications.
-
-### Are sustainable papers available for packaging?
-
-Yes, though sustainable packaging paper has traditionally been difficult to find at affordable prices. BUTTR offers sustainable paper solutions for the packaging industry that don't compromise on quality. Our papers are designed to meet the needs of modern packaging requirements while maintaining our commitment to sustainability.
+Yes, we provide 100% traceability, offer last-mile delivery, and help businesses save up to 15% on procurement costs. We work with companies of all sizes.
 
 ## Contact Us
 
@@ -68,3 +79,6 @@ Yes, though sustainable packaging paper has traditionally been difficult to find
 
 - +91-95996 34566
 - +91-95996 58766
+
+Together, we can keep this waste out of landfills, soil, and water and save Mother Earth!
+Let's turn trash into Gold!

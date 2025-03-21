@@ -360,23 +360,29 @@ export default function AboutPage() {
             Our Environmental Impact
           </h2>
           <p className="mx-auto mb-12 max-w-3xl text-center text-lg">
-            With 95 trees cut every second for paper production, our mission is
-            critical. Every ream of BUTTR paper makes a positive difference for
-            our planet. Here's the impact we've made so far:
+            Cigarette butts are the world's most littered single-use plastic,
+            containing microplastics that take over 10 years to decompose. These
+            waste items pollute water bodies and threaten ecosystems. Through
+            our innovative recycling process, we're turning this harmful waste
+            into sustainable, valuable products.
           </p>
 
           <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-3">
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">1.2M+</div>
-              <p className="text-gray-700">Trees Saved</p>
+              <div className="mb-2 text-4xl font-bold text-primary">10B+</div>
+              <p className="text-gray-700">Cigarette Butts Recycled</p>
             </div>
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">3.5M+</div>
-              <p className="text-gray-700">Gallons of Water Conserved</p>
+              <div className="mb-2 text-4xl font-bold text-primary">250B+</div>
+              <p className="text-gray-700">Gallons of Water Saved</p>
             </div>
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">850K+</div>
-              <p className="text-gray-700">kWh of Energy Saved</p>
+              <div className="mb-2 text-4xl font-bold text-primary">
+                <Recycle className="mx-auto h-12 w-12" />
+              </div>
+              <p className="text-gray-700">
+                Microplastics Kept Out of Water Systems
+              </p>
             </div>
           </div>
         </div>
