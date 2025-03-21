@@ -4,10 +4,18 @@
 import { useState, useRef, useEffect } from 'react';
 import { Send, X, MessageCircle } from 'lucide-react';
 import axios from 'axios';
+import { remark } from 'remark';
+import html from 'remark-html';
+
+const markdownToHtml = async (markdown: string) => {
+  const processedContent = await remark().use(html).process(markdown);
+  return processedContent.toString();
+};
 
 type Message = {
   role: 'user' | 'bot';
   content: string;
+  isHtml?: boolean;
 };
 
 export default function ChatBot() {
@@ -32,29 +40,52 @@ export default function ChatBot() {
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
+    if (!input.trim() || isLoading) return;
 
     const userMessage = { role: 'user' as const, content: input.trim() };
+    const currentInput = input.trim(); // Store the current input
+
     setMessages((prev) => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
 
     try {
-      const response = await axios.post('/api/chat', {
-        message: input.trim(),
-      });
+      const response = await axios.post(
+        '/api/chat',
+        {
+          message: currentInput,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          timeout: 30000, // Add timeout to prevent hanging requests
+        },
+      );
 
-      // Then update the data extraction line to:
-      const data = response.data;
+      if (response.status === 200 && response.data) {
+        const botResponse =
+          response.data.response || "Sorry, I couldn't process that request.";
+        const htmlContent = await markdownToHtml(botResponse);
 
-      setMessages((prev) => [...prev, { role: 'bot', content: data.response }]);
+        setMessages((prev) => [
+          ...prev,
+          {
+            role: 'bot',
+            content: htmlContent,
+            isHtml: true,
+          },
+        ]);
+      } else {
+        throw new Error('Invalid response from server');
+      }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error sending message:', error);
       setMessages((prev) => [
         ...prev,
         {
           role: 'bot',
-          content: 'Sorry, I encountered an error. Please try again.',
+          content: 'Sorry, I encountered an error. Please try again later.',
         },
       ]);
     } finally {
@@ -75,9 +106,9 @@ export default function ChatBot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 flex h-[500px] w-[350px] flex-col overflow-hidden rounded-lg bg-white shadow-xl">
+        <div className="fixed bottom-6 right-6 z-50 flex h-[500px] w-[350px] flex-col overflow-hidden rounded-lg bg-white text-sm shadow-xl">
           <div className="flex items-center justify-between bg-buttr-green p-4 text-white">
-            <h3 className="font-medium">BUTTR Chat Assistant</h3>
+            <h3 className="text-sm font-medium">BUTTR Chat Assistant</h3>
             <button onClick={() => setIsOpen(false)} aria-label="Close chat">
               <X className="h-5 w-5" />
             </button>
@@ -92,19 +123,26 @@ export default function ChatBot() {
                 }`}
               >
                 <div
-                  className={`max-w-[80%] rounded-lg p-3 ${
+                  className={`max-w-[80%] rounded-lg p-3 text-xs ${
                     message.role === 'user'
                       ? 'bg-buttr-green text-white'
                       : 'bg-gray-100 text-gray-800'
                   }`}
                 >
-                  {message.content}
+                  {message.isHtml ? (
+                    <div
+                      className="prose prose-sm max-w-none text-xs leading-normal tracking-wide"
+                      dangerouslySetInnerHTML={{ __html: message.content }}
+                    />
+                  ) : (
+                    message.content
+                  )}
                 </div>
               </div>
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="max-w-[80%] rounded-lg bg-gray-100 p-3 text-gray-800">
+                <div className="max-w-[80%] rounded-lg bg-gray-100 p-3 text-xs text-gray-800">
                   <div className="flex space-x-1">
                     <div className="h-2 w-2 animate-pulse rounded-full bg-gray-400"></div>
                     <div className="h-2 w-2 animate-pulse rounded-full bg-gray-400 delay-75"></div>
@@ -123,7 +161,7 @@ export default function ChatBot() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type a message..."
-                className="flex-1 rounded-l-md border border-gray-300 px-4 py-2 focus:border-buttr-green focus:outline-none focus:ring-1 focus:ring-buttr-green"
+                className="flex-1 rounded-l-md border border-gray-300 px-4 py-2 text-xs focus:border-buttr-green focus:outline-none focus:ring-1 focus:ring-buttr-green"
                 disabled={isLoading}
               />
               <button
@@ -131,7 +169,7 @@ export default function ChatBot() {
                 className="inline-flex items-center rounded-r-md bg-buttr-green px-4 py-2 text-white disabled:bg-gray-300"
                 disabled={isLoading || !input.trim()}
               >
-                <Send className="h-5 w-5" />
+                <Send className="h-4 w-4" />
               </button>
             </div>
           </form>
