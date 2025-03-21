@@ -16,9 +16,26 @@ export default function AboutPage() {
         <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-6 text-4xl font-bold md:text-5xl">About BUTTR</h1>
-            <p className="mb-8 text-xl font-medium text-gray-700 md:text-2xl">
-              100% Recycled, Tree-Free, Uber-Smooth, FSC Certified, and Premium
-              Quality Papers for High-Speed Printing and Writing.
+            <blockquote className="mb-4 italic text-gray-700">
+              <p className="text-center text-xl">
+                अयं बन्धुरयं नेति गणना लघुचेतसाम् ।
+                <br />
+                उदारचरितानां तु वसुधैव कुटुम्बकम् ॥
+              </p>
+              <footer className="mt-2 text-sm">
+                — Mahopanishad, Verse 6.72
+              </footer>
+            </blockquote>
+            <p className="mb-6 text-lg text-gray-700">
+              "The distinction of 'this person is mine, this one is not' is made
+              only by the small-minded. For those of noble character, the entire
+              world is one family."
+            </p>
+            <p className="text-md mb-8 text-gray-600">
+              The central idea upholds the value of all life, including that of
+              humans, animals, plants and microorganisms, as well as the
+              interdependence of these species both within and outside of our
+              world.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <span className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-800 shadow-sm">
@@ -48,21 +65,30 @@ export default function AboutPage() {
           <div>
             <h2 className="mb-6 text-3xl font-bold">Our Story</h2>
             <p className="mb-4 text-gray-700">
-              BUTTR was founded with a simple yet powerful mission: to create
-              premium quality paper products that don't harm our planet. We
-              believe that sustainability and quality can go hand in hand.
+              BUTTR was born from a simple observation: while India faces one of
+              the world's highest deforestation rates, the paper industry
+              continues with business as usual. We saw an opportunity to
+              challenge the status quo and create meaningful change.
             </p>
             <p className="mb-4 text-gray-700">
-              Our journey began when we realized the devastating impact
-              traditional paper production has on forests worldwide. We set out
-              to create an alternative that would meet the highest standards of
-              quality while being completely sustainable.
+              Our journey began when we noticed the disconnect between
+              environmental concerns and market realities. Despite growing
+              awareness, sustainable paper options remained scarce, expensive,
+              and often inferior in quality. The packaging industry particularly
+              struggled to source affordable recycled materials.
+            </p>
+            <p className="mb-4 text-gray-700">
+              Instead of accepting these limitations, we assembled a team of
+              experts in paper technology, sustainability, and manufacturing to
+              develop something better. After years of research and refinement,
+              we created our signature production process.
             </p>
             <p className="text-gray-700">
-              Today, BUTTR stands as a leader in sustainable paper solutions,
-              offering products that are 100% recycled, tree-free, and FSC
-              certified, without compromising on the smooth texture and premium
-              quality that our customers expect.
+              Today, BUTTR offers what was once thought impossible:
+              premium-quality recycled papers that outperform conventional
+              options at competitive prices. Our mission extends beyond
+              products. We're creating a new standard for how the paper industry
+              can operate responsibly while meeting modern business needs.
             </p>
           </div>
           <div className="relative h-80 overflow-hidden rounded-lg shadow-md md:h-96">
@@ -79,6 +105,16 @@ export default function AboutPage() {
       {/* What Makes Us Different */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
+          <h2 className="mb-4 text-center text-3xl font-bold">
+            The Problem We're Solving
+          </h2>
+          <p className="mx-auto mb-8 max-w-3xl text-center text-lg text-gray-700">
+            India has the second highest deforestation rate globally, losing
+            over 600,000 hectares of forest cover annually. With 95 trees cut
+            every second for paper production, sustainable alternatives are
+            urgently needed but rarely available.
+          </p>
+
           <h2 className="mb-12 text-center text-3xl font-bold">
             What Makes BUTTR Different
           </h2>
@@ -90,9 +126,10 @@ export default function AboutPage() {
               <h3 className="mb-3 text-xl font-semibold">100% Recycled</h3>
               <p className="text-gray-700">
                 Our papers are made from 100% post-consumer waste, diverting
-                materials from landfills and reducing the demand for virgin
-                resources. Each sheet of BUTTR paper represents our commitment
-                to a circular economy.
+                materials from landfills and reducing demand for virgin
+                resources. Unlike competitors who charge premium prices for
+                low-grade recycled paper, we offer superior quality at
+                affordable rates.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
@@ -101,10 +138,10 @@ export default function AboutPage() {
               </div>
               <h3 className="mb-3 text-xl font-semibold">Tree-Free</h3>
               <p className="text-gray-700">
-                We're proud that no trees are harmed in the making of our paper.
-                By using alternative fibers and recycled materials, we help
-                preserve forests that are vital for biodiversity and carbon
-                sequestration.
+                When big manufacturers refuse to offer sustainable papers or
+                charge exorbitant prices, we provide a completely tree-free
+                alternative. Our papers help preserve forests vital for
+                biodiversity and carbon sequestration.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
@@ -114,9 +151,8 @@ export default function AboutPage() {
               <h3 className="mb-3 text-xl font-semibold">FSC Certified</h3>
               <p className="text-gray-700">
                 Our Forest Stewardship Council certification ensures that our
-                products meet the highest environmental and social standards.
-                This certification reflects our commitment to responsible
-                sourcing and production.
+                products meet the highest environmental and social standards,
+                with 100% traceability throughout the production process.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
@@ -140,10 +176,10 @@ export default function AboutPage() {
               </div>
               <h3 className="mb-3 text-xl font-semibold">Uber-Smooth</h3>
               <p className="text-gray-700">
-                We've perfected our manufacturing process to create paper with
-                an exceptionally smooth surface. This makes BUTTR papers ideal
-                for both writing and printing, providing a premium experience
-                without environmental compromise.
+                Unlike traditional low-grade recycled papers, we've perfected
+                our manufacturing process to create paper with an exceptionally
+                smooth surface. This makes BUTTR papers ideal for both writing
+                and printing.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
@@ -154,10 +190,10 @@ export default function AboutPage() {
                 High-Speed Printing
               </h3>
               <p className="text-gray-700">
-                Our papers are engineered to perform flawlessly in all types of
-                printers, including high-speed commercial printers. You'll
-                experience fewer jams and superior print quality, making BUTTR
-                the sustainable choice for businesses.
+                Our papers are precisely cut for high-speed printing and
+                compatible with all printers and inks. You'll experience fewer
+                jams and superior print quality, making BUTTR the sustainable
+                choice for businesses.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
@@ -177,12 +213,14 @@ export default function AboutPage() {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
                 </svg>
               </div>
-              <h3 className="mb-3 text-xl font-semibold">Premium Quality</h3>
+              <h3 className="mb-3 text-xl font-semibold">
+                Cost-Effective Quality
+              </h3>
               <p className="text-gray-700">
-                We never compromise on quality. BUTTR papers meet or exceed
-                industry standards for opacity, brightness, and durability. Our
-                commitment to excellence ensures that sustainability doesn't
-                mean sacrificing performance.
+                We save our clients 15% on paper procurement costs while
+                offering biodegradable, premium-quality products. Our commitment
+                to excellence ensures sustainability doesn't mean sacrificing
+                performance or paying exorbitant prices.
               </p>
             </div>
           </div>
@@ -191,9 +229,14 @@ export default function AboutPage() {
 
       {/* Our Process */}
       <section className="container mx-auto px-4 py-16">
-        <h2 className="mb-12 text-center text-3xl font-bold">
+        <h2 className="mb-4 text-center text-3xl font-bold">
           Our Sustainable Process
         </h2>
+        <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-700">
+          Unlike big paper manufacturers who rarely offer sustainable options,
+          we've built our entire process around creating affordable,
+          high-quality recycled papers without compromising on performance.
+        </p>
         <div className="relative">
           {/* Process timeline */}
           <div className="absolute left-1/2 -z-10 hidden h-full w-1 -translate-x-1/2 transform bg-buttr-green/20 md:block"></div>
@@ -207,7 +250,8 @@ export default function AboutPage() {
                 <p className="text-gray-700">
                   We collect post-consumer waste paper from our network of
                   recycling partners. Each batch is carefully sorted to ensure
-                  quality and remove contaminants.
+                  quality and remove contaminants, diverting materials from
+                  landfills.
                 </p>
               </div>
               <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
@@ -234,7 +278,8 @@ export default function AboutPage() {
                   The sorted paper is transformed into pulp using our
                   energy-efficient process. We use eco-friendly cleaning agents
                   to remove inks and adhesives, ensuring a clean base for our
-                  premium papers.
+                  premium papers without the high costs typically associated
+                  with recycled products.
                 </p>
               </div>
             </div>
@@ -247,9 +292,10 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-gray-700">
                   Our proprietary refining process creates the ultra-smooth
-                  texture that BUTTR papers are known for. This stage is where
-                  we perfect the balance between sustainability and premium
-                  quality.
+                  texture that sets us apart from typical low-grade recycled
+                  papers. This stage is where we perfect the balance between
+                  sustainability and premium quality that was previously
+                  unavailable at affordable prices.
                 </p>
               </div>
               <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
@@ -270,13 +316,14 @@ export default function AboutPage() {
               </div>
               <div className="order-2 md:order-3 md:w-1/2 md:pl-12">
                 <h3 className="mb-3 text-xl font-semibold">
-                  Sheet Formation & Drying
+                  Sheet Formation & Precision Cutting
                 </h3>
                 <p className="text-gray-700">
                   The refined pulp is formed into sheets using our
-                  water-efficient technology. Our drying process uses 40% less
-                  energy than conventional methods, further reducing our
-                  environmental footprint.
+                  water-efficient technology and precisely cut for high-speed
+                  printing. Our drying process uses 40% less energy than
+                  conventional methods, further reducing our environmental
+                  footprint and production costs.
                 </p>
               </div>
             </div>
@@ -285,13 +332,14 @@ export default function AboutPage() {
             <div className="flex flex-col items-center md:flex-row">
               <div className="order-2 md:order-1 md:w-1/2 md:pr-12 md:text-right">
                 <h3 className="mb-3 text-xl font-semibold">
-                  Quality Control & Packaging
+                  Quality Control & Delivery
                 </h3>
                 <p className="text-gray-700">
                   Every batch undergoes rigorous testing to ensure it meets our
                   high standards. We package our products in recycled and
-                  biodegradable materials, completing our commitment to
-                  sustainability from start to finish.
+                  biodegradable materials and offer last-mile delivery, saving
+                  our clients 15% on paper procurement costs while maintaining
+                  100% traceability.
                 </p>
               </div>
               <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
@@ -312,8 +360,9 @@ export default function AboutPage() {
             Our Environmental Impact
           </h2>
           <p className="mx-auto mb-12 max-w-3xl text-center text-lg">
-            Every ream of BUTTR paper makes a positive difference for our
-            planet. Here's the impact we've made so far:
+            With 95 trees cut every second for paper production, our mission is
+            critical. Every ream of BUTTR paper makes a positive difference for
+            our planet. Here's the impact we've made so far:
           </p>
 
           <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-3">

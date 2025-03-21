@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <div className="bg-white pt-[5rem]">
       {/* Hero Section */}
-      <section className="bg-primary/10 py-12">
+      <section className="bg-buttr-green/10 py-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold md:text-5xl">Contact Us</h1>
@@ -36,11 +36,11 @@ export default function ContactPage() {
                 <div>
                   <h3 className="mb-1 text-lg font-medium">Our Location</h3>
                   <p className="text-gray-700">
-                    123 Eco Street, Green Building
+                    Ground Floor, Galli No. 3, Nagli Nagla Village,
                     <br />
-                    Sustainable City, SC 98765
+                    Sector – 134, Noida, Gautam Buddha Nagar,
                     <br />
-                    United States
+                    Uttar Pradesh, India – 201 304
                   </p>
                 </div>
               </div>
@@ -53,18 +53,18 @@ export default function ContactPage() {
                   <h3 className="mb-1 text-lg font-medium">Email Us</h3>
                   <p className="text-gray-700">
                     <a
-                      href="mailto:hello@buttrpapers.com"
+                      href="mailto:hello@buttrpaper.com"
                       className="transition-colors hover:text-primary"
                     >
-                      hello@buttrpapers.com
+                      hello@buttrpaper.com
                     </a>
                   </p>
                   <p className="mt-1 text-gray-700">
                     <a
-                      href="mailto:support@buttrpapers.com"
+                      href="mailto:support@buttrpaper.com"
                       className="transition-colors hover:text-primary"
                     >
-                      support@buttrpapers.com
+                      support@buttrpaper.com
                     </a>
                   </p>
                 </div>
@@ -78,10 +78,18 @@ export default function ContactPage() {
                   <h3 className="mb-1 text-lg font-medium">Call Us</h3>
                   <p className="text-gray-700">
                     <a
-                      href="tel:+18005551234"
+                      href="tel:+919599634566"
                       className="transition-colors hover:text-primary"
                     >
-                      +1 (800) 555-1234
+                      +91-95996 34566
+                    </a>
+                  </p>
+                  <p className="mt-1 text-gray-700">
+                    <a
+                      href="tel:+919599658766"
+                      className="transition-colors hover:text-primary"
+                    >
+                      +91-95996 58766
                     </a>
                   </p>
                 </div>
@@ -104,12 +112,16 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="relative mt-8 h-64 overflow-hidden rounded-lg bg-gray-200">
-              <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                <MapPin className="mr-2 h-8 w-8" />
-                <span>Map Location</span>
-              </div>
+            {/* Google Map */}
+            <div className="relative mt-8 h-64 overflow-hidden rounded-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.7913471207105!2d77.37792452847278!3d28.500327098477257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce920823414df%3A0xb850d0748e7692b!2sGali%20no.4%20Nagli%20Nagla!5e1!3m2!1sen!2sin!4v1742531317366!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
 
@@ -182,21 +194,21 @@ export default function ContactPage() {
                 ></textarea>
               </div>
 
-              <div className="flex items-center">
-                <input
-                  id="newsletter"
-                  name="newsletter"
-                  type="checkbox"
-                  className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
-                />
-                <label
-                  htmlFor="newsletter"
-                  className="ml-2 block text-sm text-gray-700"
-                >
-                  Subscribe to our newsletter for sustainable paper tips and
-                  updates
-                </label>
-              </div>
+              {/*<div className="flex items-center">*/}
+              {/*  <input*/}
+              {/*    id="newsletter"*/}
+              {/*    name="newsletter"*/}
+              {/*    type="checkbox"*/}
+              {/*    className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"*/}
+              {/*  />*/}
+              {/*  <label*/}
+              {/*    htmlFor="newsletter"*/}
+              {/*    className="ml-2 block text-sm text-gray-700"*/}
+              {/*  >*/}
+              {/*    Subscribe to our newsletter for sustainable paper tips and*/}
+              {/*    updates*/}
+              {/*  </label>*/}
+              {/*</div>*/}
 
               <button
                 type="submit"
@@ -219,72 +231,53 @@ export default function ContactPage() {
           <div className="mx-auto max-w-3xl space-y-8">
             <div className="rounded-lg bg-white p-6 shadow-sm">
               <h3 className="mb-3 text-xl font-semibold">
-                How can I place a bulk order?
+                What is the environmental impact of paper production in India?
               </h3>
               <p className="text-gray-700">
-                For bulk orders, please contact our sales team directly at
-                bulk@buttrpapers.com or call +1 (800) 555-1234. We offer special
-                pricing and customization options for large volume orders.
+                India has the second highest deforestation rate in the world,
+                losing over 600,000 hectares of forest cover annually. The paper
+                and paper packaging industry is a major contributor to this
+                deforestation, with approximately 95 trees cut every second to
+                produce paper and paper packaging products.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
               <h3 className="mb-3 text-xl font-semibold">
-                Do you ship internationally?
+                What makes BUTTR papers different from other recycled options?
               </h3>
               <p className="text-gray-700">
-                Yes, we ship to most countries worldwide. International shipping
-                rates and delivery times vary by location. You can calculate
-                shipping costs at checkout or contact our customer service team
-                for more information.
+                BUTTR Sustainable Papers are 100% recycled, uber-smooth paper
+                sheets precisely cut for high-speed printing and compatible with
+                all printers and inks. Unlike typical recycled papers that are
+                low-grade and expensive, our papers are affordable,
+                biodegradable, premium-quality, and tree-free.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
               <h3 className="mb-3 text-xl font-semibold">
-                What is your return policy?
+                Do you offer services for businesses?
               </h3>
               <p className="text-gray-700">
-                We accept returns within 30 days of purchase for unused products
-                in their original packaging. Please note that custom orders and
-                bulk purchases may have different return policies. Contact our
-                support team for assistance with returns.
+                Yes, we provide 100% traceability, offer last-mile delivery, and
+                help businesses save up to 15% on paper procurement costs. We
+                work with companies of all sizes and can accommodate both
+                regular and specialized paper needs for various applications.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-sm">
               <h3 className="mb-3 text-xl font-semibold">
-                How sustainable is your packaging?
+                Are sustainable papers available for packaging?
               </h3>
               <p className="text-gray-700">
-                All our packaging is made from recycled materials and is either
-                recyclable or biodegradable. We use minimal packaging to reduce
-                waste and our shipping materials are plastic-free. We're
-                constantly working to improve our packaging sustainability.
+                Yes, though sustainable packaging paper has traditionally been
+                difficult to find at affordable prices. BUTTR offers sustainable
+                paper solutions for the packaging industry that don't compromise
+                on quality. Our papers are designed to meet the needs of modern
+                packaging requirements while maintaining our commitment to
+                sustainability.
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="container mx-auto px-4 py-16 text-center">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-4 text-3xl font-bold">Stay Connected</h2>
-          <p className="mb-8 text-lg text-gray-700">
-            Subscribe to our newsletter for sustainable paper tips, new product
-            announcements, and exclusive offers.
-          </p>
-          <form className="mx-auto flex max-w-md flex-col gap-4 sm:flex-row">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-grow rounded-md border border-gray-300 px-4 py-3 focus:border-primary focus:ring-primary"
-            />
-            <button
-              type="submit"
-              className="rounded-md bg-primary px-6 py-3 font-medium text-white transition-colors hover:bg-primary/90"
-            >
-              Subscribe
-            </button>
-          </form>
         </div>
       </section>
     </div>
