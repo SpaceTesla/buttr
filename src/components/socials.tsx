@@ -12,7 +12,7 @@ const Socials = () => {
     >
       <Button variant={'link'} className={'m-0 p-0'} asChild>
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/buttrpaper"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -26,7 +26,11 @@ const Socials = () => {
         </a>
       </Button>
       <Button variant={'link'} className={'m-0 p-0'} asChild>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.twitter.com/buttrpaper"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src={Logos.Twitter}
             alt={'twitter'}
@@ -38,7 +42,7 @@ const Socials = () => {
       </Button>
       <Button variant={'link'} className={'m-0 p-0'} asChild>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/buttrpaper"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -51,21 +55,21 @@ const Socials = () => {
           />
         </a>
       </Button>
-      <Button variant={'link'} className={'m-0 p-0'} asChild>
-        <a
-          href="https://whatsapp.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src={Logos.WhatsApp}
-            alt={'whatsapp'}
-            className={'rounded-full bg-white'}
-            width={32}
-            height={32}
-          />
-        </a>
-      </Button>
+      {/*<Button variant={'link'} className={'m-0 p-0'} asChild>*/}
+      {/*  <a*/}
+      {/*    href="https://www.linkedin.com/company/buttrpaper"*/}
+      {/*    target="_blank"*/}
+      {/*    rel="noopener noreferrer"*/}
+      {/*  >*/}
+      {/*    <Image*/}
+      {/*      src={Logos.LinkedIn || '/logos/linkedin.svg'}*/}
+      {/*      alt={'linkedin'}*/}
+      {/*      className={'rounded-full bg-buttr-yellow'}*/}
+      {/*      width={32}*/}
+      {/*      height={32}*/}
+      {/*    />*/}
+      {/*  </a>*/}
+      {/*</Button>*/}
     </div>
   );
 };

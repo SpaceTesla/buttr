@@ -51,71 +51,6 @@ const products: Product[] = [
     description:
       "Sustainable notebooks with smooth paper that's perfect for writing and sketching.",
   },
-  {
-    id: '4',
-    name: 'BUTTR Presentation Paper',
-    category: 'Specialty Paper',
-    price: 15.99,
-    image: '/placeholder.svg?height=300&width=300',
-    rating: 4.6,
-    isNew: false,
-    isBestseller: false,
-    tags: ['100% Recycled', 'Tree-Free', 'FSC Certified'],
-    description:
-      'Premium heavyweight paper for important presentations and documents.',
-  },
-  {
-    id: '5',
-    name: 'BUTTR Kraft Paper',
-    category: 'Specialty Paper',
-    price: 9.99,
-    image: '/placeholder.svg?height=300&width=300',
-    rating: 4.5,
-    isNew: false,
-    isBestseller: false,
-    tags: ['100% Recycled', 'Tree-Free', 'FSC Certified'],
-    description:
-      'Versatile kraft paper for wrapping, crafts, and sustainable packaging.',
-  },
-  {
-    id: '6',
-    name: 'BUTTR Eco Envelopes',
-    category: 'Envelopes',
-    price: 7.99,
-    image: '/placeholder.svg?height=300&width=300',
-    rating: 4.7,
-    isNew: true,
-    isBestseller: false,
-    tags: ['100% Recycled', 'Tree-Free', 'FSC Certified'],
-    description:
-      'Sustainable envelopes made from 100% recycled materials. Available in multiple sizes.',
-  },
-  {
-    id: '7',
-    name: 'BUTTR Art Paper',
-    category: 'Art Supplies',
-    price: 18.99,
-    image: '/placeholder.svg?height=300&width=300',
-    rating: 4.9,
-    isNew: true,
-    isBestseller: false,
-    tags: ['100% Recycled', 'Tree-Free', 'FSC Certified'],
-    description:
-      'Premium art paper for sketching, drawing, and painting. Acid-free and archival quality.',
-  },
-  {
-    id: '8',
-    name: 'BUTTR Cardstock',
-    category: 'Specialty Paper',
-    price: 14.99,
-    image: '/placeholder.svg?height=300&width=300',
-    rating: 4.6,
-    isNew: false,
-    isBestseller: true,
-    tags: ['100% Recycled', 'Tree-Free', 'FSC Certified'],
-    description:
-      'Heavyweight cardstock for business cards, invitations, and craft projects.',
-  },
 ];
 
 export default function StorePage() {
@@ -140,42 +75,32 @@ export default function StorePage() {
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="mb-8 text-2xl font-bold">Featured Products</h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {featuredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} featured={true} />
-          ))}
-        </div>
-      </section>
-
       {/* Main Store Section */}
       <section className="container mx-auto px-4 py-12">
         {/* Sort Controls */}
-        <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-          <div className="text-lg font-medium">
-            All Products{' '}
-            <span className="text-base text-gray-500">
-              ({products.length} items)
-            </span>
-          </div>
-          <div className="flex items-center">
-            <span className="mr-2 text-sm text-gray-600">Sort by:</span>
-            <div className="relative">
-              <select className="appearance-none rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-sm focus:border-primary focus:outline-none focus:ring-primary">
-                <option>Featured</option>
-                <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
-                <option>Newest</option>
-                <option>Best Selling</option>
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
-                <ChevronDown className="h-4 w-4" />
-              </div>
-            </div>
-          </div>
-        </div>
+        {/*<div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">*/}
+        {/*  <div className="text-lg font-medium">*/}
+        {/*    All Products{' '}*/}
+        {/*    <span className="text-base text-gray-500">*/}
+        {/*      ({products.length} items)*/}
+        {/*    </span>*/}
+        {/*  </div>*/}
+        {/*  <div className="flex items-center">*/}
+        {/*    <span className="mr-2 text-sm text-gray-600">Sort by:</span>*/}
+        {/*    <div className="relative">*/}
+        {/*      <select className="appearance-none rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-sm focus:border-primary focus:outline-none focus:ring-primary">*/}
+        {/*        <option>Featured</option>*/}
+        {/*        <option>Price: Low to High</option>*/}
+        {/*        <option>Price: High to Low</option>*/}
+        {/*        <option>Newest</option>*/}
+        {/*        <option>Best Selling</option>*/}
+        {/*      </select>*/}
+        {/*      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">*/}
+        {/*        <ChevronDown className="h-4 w-4" />*/}
+        {/*      </div>*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
 
         {/* Products */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
