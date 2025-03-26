@@ -3,6 +3,7 @@ import Paper from '../../public/paper.png';
 import Socials from '@/components/socials';
 import Point from '@/components/point';
 import Link from 'next/link';
+import { InfiniteMovingCards } from '@/components/infinite-moving-cards';
 
 export const metadata = {
   title: 'BUTTR | Sustainable Papers',
@@ -43,7 +44,7 @@ export default function Home() {
             className={'xl:pl-2'}
           />
         </div>
-        {/* Right column - Paper Image and Tagline */}
+        {/* Center column - Paper Image and Tagline */}
         <div className="relative col-span-6 flex flex-col justify-center md:justify-center lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 xl:max-h-[40rem] xl:max-w-[40rem]">
           <div className="relative flex h-min w-full items-center justify-center">
             <div
@@ -112,6 +113,100 @@ export default function Home() {
               {/*</div>*/}
             </div>
           </div>
+        </div>
+        <div
+          className="group absolute right-8 top-[15%] flex translate-y-1/2 cursor-pointer flex-col text-center"
+          title="Hover to see our clients"
+        >
+          <div className="w-[160px] p-4 text-center text-xl font-bold hover:text-buttr-green">
+            Our Clients
+          </div>
+          {/* Client logos container */}
+          <div className="absolute right-0 top-full mt-2 w-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:w-[160px]">
+            <div className="w-[160px]">
+              <InfiniteMovingCards
+                speed="normal"
+                direction="down"
+                pauseOnHover={true}
+                cards={[
+                  <div
+                    key="client1"
+                    className="flex h-16 w-full items-center justify-center rounded-lg bg-white p-2 shadow-sm"
+                  >
+                    <Image
+                      src="/logos/clients/logo1.png"
+                      alt="Client"
+                      width={80}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>,
+                  <div
+                    key="client1"
+                    className="flex h-16 w-full items-center justify-center rounded-lg bg-white p-2 shadow-sm"
+                  >
+                    <Image
+                      src="/logos/clients/logo2.png"
+                      alt="Client"
+                      width={80}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>,
+                  <div
+                    key="client1"
+                    className="flex h-16 w-full items-center justify-center rounded-lg bg-white p-2 shadow-sm"
+                  >
+                    <Image
+                      src="/logos/clients/logo3.png"
+                      alt="Client"
+                      width={80}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>,
+                  <div
+                    key="client1"
+                    className="flex h-16 w-full items-center justify-center rounded-lg bg-white p-2 shadow-sm"
+                  >
+                    <Image
+                      src="/logos/clients/logo4.png"
+                      alt="Client"
+                      width={80}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>,
+                  <div
+                    key="client1"
+                    className="flex h-16 w-full items-center justify-center rounded-lg bg-white p-2 shadow-sm"
+                  >
+                    <Image
+                      src="/logos/clients/logo5.png"
+                      alt="Client"
+                      width={80}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>,
+                  <div
+                    key="client1"
+                    className="flex h-16 w-full items-center justify-center rounded-lg bg-white p-2 shadow-sm"
+                  >
+                    <Image
+                      src="/logos/clients/logo6.png"
+                      alt="Client"
+                      width={80}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>,
+                  /* Other client cards remain unchanged */
+                ]}
+                className="h-[400px]"
+              />
+            </div>
+          </div>{' '}
         </div>
       </div>
 

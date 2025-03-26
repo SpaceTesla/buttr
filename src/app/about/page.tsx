@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { CheckCircle, Leaf, Recycle, Award, Printer } from 'lucide-react';
+import { InfiniteMovingCards } from '@/components/infinite-moving-cards';
 
 export const metadata = {
   title: 'About Us | BUTTR Sustainable Papers',
@@ -59,6 +60,88 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Event Partners */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-8 text-center text-3xl font-bold">
+            Our Event Partners
+          </h2>
+          <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-700">
+            We're proud to collaborate with these organizations who share our
+            commitment to sustainability.
+          </p>
+
+          <InfiniteMovingCards
+            speed="normal"
+            direction="left"
+            pauseOnHover={true}
+            cards={[
+              <div
+                key="logo1"
+                className="flex h-32 w-48 items-center justify-center rounded-lg bg-white p-4 shadow-sm"
+              >
+                <Image
+                  src="/logos/events/logo1.png"
+                  alt="Event Partner"
+                  width={120}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>,
+              <div
+                key="logo2"
+                className="flex h-32 w-48 items-center justify-center rounded-lg bg-white p-4 shadow-sm"
+              >
+                <Image
+                  src="/logos/events/logo2.png"
+                  alt="Event Partner"
+                  width={120}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>,
+              <div
+                key="logo3"
+                className="flex h-32 w-48 items-center justify-center rounded-lg bg-white p-4 shadow-sm"
+              >
+                <Image
+                  src="/logos/events/logo3.png"
+                  alt="Event Partner"
+                  width={120}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>,
+              <div
+                key="logo4"
+                className="flex h-32 w-48 items-center justify-center rounded-lg bg-white p-4 shadow-sm"
+              >
+                <Image
+                  src="/logos/events/logo4.png"
+                  alt="Event Partner"
+                  width={120}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>,
+              <div
+                key="logo5"
+                className="flex h-32 w-48 items-center justify-center rounded-lg bg-white p-4 shadow-sm"
+              >
+                <Image
+                  src="/logos/events/logo5.jpg"
+                  alt="Event Partner"
+                  width={120}
+                  height={80}
+                  className="object-contain"
+                />
+              </div>,
+              // Add more logos as needed
+            ]}
+            className="py-4"
+          />
+        </div>
+      </section>
       {/* Our Story Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="grid items-center gap-12 md:grid-cols-2">
