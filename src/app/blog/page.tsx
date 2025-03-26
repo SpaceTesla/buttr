@@ -1,5 +1,6 @@
-import { getBlogPosts } from '@/data/blog-data';
+// src/app/blog/page.tsx - Updated to use database
 import BlogList from './components/blog-list';
+import { getDbBlogPosts } from '@/lib/blog-utils';
 
 export const metadata = {
   title: 'Blog | BUTTR Sustainable Papers',
@@ -7,8 +8,9 @@ export const metadata = {
     'Read the latest articles about sustainable paper products and eco-friendly practices',
 };
 
-export default function BlogPage() {
-  const posts = getBlogPosts();
+export default async function BlogPage() {
+  // Fetch posts from database
+  const posts = await getDbBlogPosts();
 
   return (
     <main className="container mx-auto px-4 py-12 pt-[5rem]">
