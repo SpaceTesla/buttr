@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { BlogPost } from '@/data/blog-data';
-import { CalendarIcon, UserIcon } from 'lucide-react';
+import { CalendarIcon, ExternalLinkIcon } from 'lucide-react';
 
 export default function BlogList({ posts }: { posts: BlogPost[] }) {
   return (
@@ -17,25 +17,39 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
                 <CalendarIcon className="mr-1 h-4 w-4" />
                 <span>{post.date}</span>
               </div>
-              <div className="flex items-center">
-                <UserIcon className="mr-1 h-4 w-4" />
-                <span>{post.author}</span>
-              </div>
+              {/*<div className="flex items-center">*/}
+              {/*  <ExternalLinkIcon className="mr-1 h-4 w-4" />*/}
+              {/*  <a*/}
+              {/*    href={post.link}*/}
+              {/*    target="_blank"*/}
+              {/*    rel="noopener noreferrer"*/}
+              {/*    className="hover:underline"*/}
+              {/*  >*/}
+              {/*    External Source*/}
+              {/*  </a>*/}
+              {/*</div>*/}
             </div>
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={post.link}>
               <h2 className="mb-2 text-xl font-semibold transition-colors hover:text-buttr-green">
                 {post.title}
               </h2>
             </Link>
             <p className="mb-4 text-muted-foreground">{post.excerpt}</p>
-            <Link
-              href={`/blog/${post.slug}`}
+            <a
+              href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-auto font-medium text-primary hover:text-buttr-green hover:underline"
             >
-              Read More
-            </Link>
+              Know More
+            </a>
           </div>
-          <Link href={`/blog/${post.slug}`} className="md:w-1/3 lg:w-1/4">
+          <a
+            href={post.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="md:w-1/3 lg:w-1/4"
+          >
             <div className="relative h-48 w-full md:h-full">
               <Image
                 src={post.coverImage || '/placeholder.svg'}
@@ -44,7 +58,7 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
                 className="object-cover"
               />
             </div>
-          </Link>
+          </a>
         </article>
       ))}
     </div>

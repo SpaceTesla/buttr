@@ -55,6 +55,7 @@ export default function Home() {
                 width={800}
                 height={800}
                 className="object-contain"
+                priority={true}
               />
               <div
                 className={
