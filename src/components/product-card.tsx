@@ -97,17 +97,6 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
             ))}
           </div>
         )}
-
-        {/*{product.isBestseller && (*/}
-        {/*  <div className="absolute left-4 top-4 rounded bg-yellow-500 px-2 py-1 text-xs font-bold text-white">*/}
-        {/*    BESTSELLER*/}
-        {/*  </div>*/}
-        {/*)}*/}
-        {/*{product.isNew && (*/}
-        {/*  <div className="absolute left-4 top-4 rounded bg-blue-500 px-2 py-1 text-xs font-bold text-white">*/}
-        {/*    NEW*/}
-        {/*  </div>*/}
-        {/*)}*/}
       </div>
       <div className="p-4">
         {!featured && (

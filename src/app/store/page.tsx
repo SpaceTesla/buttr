@@ -12,6 +12,9 @@ export const metadata = {
 };
 
 // Get product data from file system
+// In src/app/store/page.tsx, modify the getProductData function
+// by removing the rating property
+
 const getProductData = () => {
   try {
     const productsDir = path.join(process.cwd(), 'public/paper');
@@ -30,9 +33,6 @@ const getProductData = () => {
         category: 'Sustainable Paper',
         price: 12.99 + index * 2, // Example pricing
         images: images,
-        rating: 4.7 + (Math.random() * 0.3).toFixed(1),
-        isNew: index % 3 === 0,
-        isBestseller: index % 2 === 0,
         tags: ['100% Recycled', 'Tree-Free', 'FSC Certified'],
         description: `Premium quality sustainable ${folder.replace(/[-_]/g, ' ')} paper. Environmentally friendly and perfect for all your needs.`,
       };

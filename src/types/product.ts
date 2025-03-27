@@ -5,9 +5,6 @@ export interface Product {
   price: number;
   images?: string[];
   image?: string; // Keep for backward compatibility
-  rating: number;
-  isNew: boolean;
-  isBestseller: boolean;
   tags: string[];
   description: string;
 }
