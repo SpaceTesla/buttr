@@ -6,6 +6,7 @@ import { Send, X, MessageCircle } from 'lucide-react';
 import axios from 'axios';
 import { remark } from 'remark';
 import html from 'remark-html';
+import Image from 'next/image';
 
 const markdownToHtml = async (markdown: string) => {
   const processedContent = await remark().use(html).process(markdown);
@@ -29,6 +30,9 @@ export default function ChatBot() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // WhatsApp number - Replace with your actual WhatsApp business number
+  const whatsappNumber = '+918884230972';
 
   useEffect(() => {
     scrollToBottom();
@@ -93,16 +97,42 @@ export default function ChatBot() {
     }
   };
 
+  const openWhatsApp = () => {
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=Hello, I'd like to know more about BUTTR sustainable papers.`,
+      '_blank',
+    );
+  };
+
   return (
     <>
-      {/* Chat Button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-gray-700 text-white shadow-lg hover:bg-gray-500"
-        aria-label="Open chat"
-      >
-        <MessageCircle className="h-6 w-6" />
-      </button>
+      {/* Chat Buttons Container */}
+      <div className="fixed bottom-6 right-6 flex flex-col items-end space-y-4">
+        {/* WhatsApp Chat Button */}
+        <button
+          onClick={openWhatsApp}
+          className="flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg"
+          aria-label="Chat on WhatsApp"
+          aria-details={'Chat with us on WhatsApp'}
+          title={'Chat with us on WhatsApp'}
+        >
+          <Image
+            src={'/socials/whatsapp.svg'}
+            width={60}
+            height={60}
+            alt={'whatsapp'}
+          />
+        </button>
+
+        {/* AI Chat Button */}
+        <button
+          onClick={() => setIsOpen(true)}
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#2f2f2f] text-white shadow-lg hover:bg-[#4a4a4a]"
+          aria-label="Open AI chat"
+        >
+          <MessageCircle className="h-8 w-8" />
+        </button>
+      </div>
 
       {/* Chat Window */}
       {isOpen && (
@@ -173,6 +203,15 @@ export default function ChatBot() {
               </button>
             </div>
           </form>
+
+          {/*<div className="border-t p-3 text-center">*/}
+          {/*  <button*/}
+          {/*    onClick={openWhatsApp}*/}
+          {/*    className="text-xs text-gray-600 hover:text-buttr-green"*/}
+          {/*  >*/}
+          {/*    Prefer to chat with a human? Connect on WhatsApp*/}
+          {/*  </button>*/}
+          {/*</div>*/}
         </div>
       )}
     </>

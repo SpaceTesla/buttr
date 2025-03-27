@@ -55,21 +55,21 @@ const Socials = () => {
           />
         </a>
       </Button>
-      {/*<Button variant={'link'} className={'m-0 p-0'} asChild>*/}
-      {/*  <a*/}
-      {/*    href="https://www.linkedin.com/company/buttrpaper"*/}
-      {/*    target="_blank"*/}
-      {/*    rel="noopener noreferrer"*/}
-      {/*  >*/}
-      {/*    <Image*/}
-      {/*      src={Logos.LinkedIn || '/logos/linkedin.svg'}*/}
-      {/*      alt={'linkedin'}*/}
-      {/*      className={'rounded-full bg-buttr-yellow'}*/}
-      {/*      width={32}*/}
-      {/*      height={32}*/}
-      {/*    />*/}
-      {/*  </a>*/}
-      {/*</Button>*/}
+      <Button variant={'link'} className={'m-0 p-0'} asChild>
+        <a
+          href="https://www.linkedin.com/company/buttrpaper"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={Logos.LinkedIn || '/logos/linkedin.svg'}
+            alt={'linkedin'}
+            className={'rounded-full bg-[#2f2f2f] bg-buttr-yellow'}
+            width={32}
+            height={32}
+          />
+        </a>
+      </Button>
     </div>
   );
 };
