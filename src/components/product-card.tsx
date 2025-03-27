@@ -1,4 +1,6 @@
 // components/ProductCard.tsx
+'use client';
+
 import Image from 'next/image';
 import { ShoppingCart, Leaf, Recycle, Award } from 'lucide-react';
 import { Product } from '@/types/product';
@@ -53,9 +55,21 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
           ))}
         </div>
         <div className="flex items-center justify-between">
-          <button className="inline-flex items-center rounded-md bg-buttr-green px-3 py-2 text-black transition-colors hover:bg-buttr-green/90">
+          <button
+            className="inline-flex items-center rounded-md bg-buttr-green px-3 py-2 text-black transition-colors hover:bg-buttr-green/90"
+            onClick={() => {
+              const whatsappNumber = '+918884230972'; // Using the same number from chat-bot.tsx
+              const message = encodeURIComponent(
+                `Hi! I am interested in buying ${product.name}`,
+              );
+              window.open(
+                `https://wa.me/${whatsappNumber}?text=${message}`,
+                '_blank',
+              );
+            }}
+          >
             <ShoppingCart className="mr-2 h-4 w-4" />
-            Shop on Amazon
+            Buy Now
           </button>
         </div>
       </div>
