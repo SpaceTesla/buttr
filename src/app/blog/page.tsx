@@ -2,6 +2,8 @@
 import BlogList from './components/blog-list';
 import { getDbBlogPosts } from '@/lib/blog-utils';
 
+export const revalidate = 60;
+
 export const metadata = {
   title: 'Blog | BUTTR Sustainable Papers',
   description:
