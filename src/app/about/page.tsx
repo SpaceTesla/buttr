@@ -60,15 +60,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Event Partners */}
+      {/* Award-Winning Events */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="mb-8 text-center text-3xl font-bold">
-            Our Event Partners
+            Award-Winning Recognition
           </h2>
           <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-700">
-            We're proud to collaborate with these organizations who share our
-            commitment to sustainability.
+            We're honored to have received recognition at these prestigious
+            events for our innovation in sustainability.
           </p>
 
           <InfiniteMovingCards
@@ -82,7 +82,7 @@ export default function AboutPage() {
               >
                 <Image
                   src="/logos/events/logo1.png"
-                  alt="Event Partner"
+                  alt="Award Event"
                   width={120}
                   height={80}
                   className="object-contain"
@@ -94,7 +94,7 @@ export default function AboutPage() {
               >
                 <Image
                   src="/logos/events/logo2.png"
-                  alt="Event Partner"
+                  alt="Award Event"
                   width={120}
                   height={80}
                   className="object-contain"
@@ -106,7 +106,7 @@ export default function AboutPage() {
               >
                 <Image
                   src="/logos/events/logo3.png"
-                  alt="Event Partner"
+                  alt="Award Event"
                   width={120}
                   height={80}
                   className="object-contain"
@@ -118,7 +118,7 @@ export default function AboutPage() {
               >
                 <Image
                   src="/logos/events/logo4.png"
-                  alt="Event Partner"
+                  alt="Award Event"
                   width={120}
                   height={80}
                   className="object-contain"
@@ -130,7 +130,7 @@ export default function AboutPage() {
               >
                 <Image
                   src="/logos/events/logo5.jpg"
-                  alt="Event Partner"
+                  alt="Award Event"
                   width={120}
                   height={80}
                   className="object-contain"
@@ -142,6 +142,7 @@ export default function AboutPage() {
           />
         </div>
       </section>
+
       {/* Our Story Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="grid items-center gap-12 md:grid-cols-2">
