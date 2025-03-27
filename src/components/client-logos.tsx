@@ -44,7 +44,7 @@ export default function ClientLogos() {
   return (
     <div
       ref={containerRef}
-      className={`group absolute right-8 flex cursor-pointer flex-col items-center text-center transition-all duration-500 ease-in-out ${
+      className={`group absolute right-8 hidden cursor-pointer flex-col items-center text-center transition-all duration-500 ease-in-out lg:flex ${
         isExpanded ? 'top-[10%] translate-y-1/2' : 'top-1/2 -translate-y-1/2'
       }`}
       title="Hover to see our clients"

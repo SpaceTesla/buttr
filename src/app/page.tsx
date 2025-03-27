@@ -5,6 +5,7 @@ import Point from '@/components/point';
 import Link from 'next/link';
 import React from 'react';
 import ClientLogos from '@/components/client-logos';
+import MobileClientLogos from '@/components/mobile-client-logos';
 
 export const metadata = {
   title: 'BUTTR | Sustainable Papers',
@@ -115,7 +116,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <ClientLogos />
+        <ClientLogos /> {/* Shows on desktop */}
+        <MobileClientLogos /> {/* Shows on mobile */}
       </div>
 
       {/* Social Media Icons */}
