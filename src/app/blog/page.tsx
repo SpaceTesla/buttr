@@ -5,9 +5,24 @@ import { getDbBlogPosts } from '@/lib/blog-utils';
 export const revalidate = 60;
 
 export const metadata = {
-  title: 'Blog | BUTTR Sustainable Papers',
+  title: 'Blog - BUTTR Sustainable Papers',
   description:
-    'Read the latest articles about sustainable paper products and eco-friendly practices',
+    'Explore our collection of articles on sustainable paper products, eco-friendly packaging, and environmental practices. Learn how BUTTR is revolutionizing the paper industry.',
+  keywords:
+    'sustainable paper, eco-friendly paper, BUTTR papers, environmental practices',
+  openGraph: {
+    title: 'Sustainable Paper Blog | BUTTR Sustainable Papers',
+    description:
+      'Explore sustainable paper innovations and eco-friendly practices',
+    images: [
+      {
+        url: '/images/og-img.png', // Create this image
+        width: 1200,
+        height: 630,
+        alt: 'BUTTR Sustainable Papers Blog',
+      },
+    ],
+  },
 };
 
 export default async function BlogPage() {
