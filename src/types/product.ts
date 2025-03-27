@@ -1,13 +1,13 @@
-// types/product.ts
-export type Product = {
+export interface Product {
   id: string;
   name: string;
   category: string;
   price: number;
-  image: string;
+  images?: string[];
+  image?: string; // Keep for backward compatibility
   rating: number;
   isNew: boolean;
   isBestseller: boolean;
   tags: string[];
   description: string;
-};
+}

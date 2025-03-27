@@ -177,7 +177,7 @@ export default function AboutPage() {
           </div>
           <div className="relative h-80 overflow-hidden rounded-lg shadow-md md:h-96">
             <Image
-              src="/placeholder.svg?height=600&width=800"
+              src="/about.jpg"
               alt="BUTTR sustainable paper production"
               fill
               className="object-cover"

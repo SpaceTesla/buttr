@@ -2,7 +2,15 @@
 'use client';
 
 import Image from 'next/image';
-import { ShoppingCart, Leaf, Recycle, Award } from 'lucide-react';
+import { useState } from 'react';
+import {
+  ShoppingCart,
+  Leaf,
+  Recycle,
+  Award,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react';
 import { Product } from '@/types/product';
 
 interface ProductCardProps {
@@ -11,27 +19,95 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, featured = false }: ProductCardProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === (product.images?.length ?? 0) - 1 ? 0 : prev + 1,
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? (product.images?.length ?? 0) - 1 : prev - 1,
+    );
+  };
+
+  // Get current image or use a placeholder if no images are available
+  const currentImage =
+    product.images && product.images.length > 0
+      ? product.images[currentImageIndex]
+      : '/placeholder.svg';
+
   return (
     <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md">
       <div className="relative">
-        <div className={`relative ${featured ? 'h-64' : 'h-48'} w-full`}>
+        <div className={`relative h-80 w-full`}>
           <Image
-            src={product.image || '/placeholder.svg'}
+            src={currentImage}
             alt={product.name}
             fill
-            className="object-cover"
+            className="object-contain"
           />
         </div>
-        {product.isBestseller && (
-          <div className="absolute left-4 top-4 rounded bg-yellow-500 px-2 py-1 text-xs font-bold text-white">
-            BESTSELLER
+
+        {/* Navigation arrows - only show if there are multiple images */}
+        {product.images && product.images.length > 1 && (
+          <>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                prevImage();
+              }}
+              className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/70 p-1 transition-colors hover:bg-buttr-green hover:text-white"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                nextImage();
+              }}
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/70 p-1 transition-colors hover:bg-buttr-green hover:text-white"
+              aria-label="Next image"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </>
+        )}
+
+        {/* Image indicators */}
+        {product.images && product.images.length > 1 && (
+          <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1">
+            {product.images.map((_, index) => (
+              <button
+                key={index}
+                className={`h-1.5 w-1.5 rounded-full ${
+                  index === currentImageIndex
+                    ? 'bg-buttr-green'
+                    : 'bg-gray-500/50'
+                }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentImageIndex(index);
+                }}
+                aria-label={`Go to image ${index + 1}`}
+              />
+            ))}
           </div>
         )}
-        {product.isNew && (
-          <div className="absolute left-4 top-4 rounded bg-blue-500 px-2 py-1 text-xs font-bold text-white">
-            NEW
-          </div>
-        )}
+
+        {/*{product.isBestseller && (*/}
+        {/*  <div className="absolute left-4 top-4 rounded bg-yellow-500 px-2 py-1 text-xs font-bold text-white">*/}
+        {/*    BESTSELLER*/}
+        {/*  </div>*/}
+        {/*)}*/}
+        {/*{product.isNew && (*/}
+        {/*  <div className="absolute left-4 top-4 rounded bg-blue-500 px-2 py-1 text-xs font-bold text-white">*/}
+        {/*    NEW*/}
+        {/*  </div>*/}
+        {/*)}*/}
       </div>
       <div className="p-4">
         {!featured && (
@@ -56,9 +132,9 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
         </div>
         <div className="flex items-center justify-between">
           <button
-            className="inline-flex items-center rounded-md bg-buttr-green px-3 py-2 text-black transition-colors hover:bg-buttr-green/90"
+            className="inline-flex items-center rounded-md bg-buttr-green px-3 py-2 font-medium text-white transition-colors hover:bg-buttr-green/90"
             onClick={() => {
-              const whatsappNumber = '+918884230972'; // Using the same number from chat-bot.tsx
+              const whatsappNumber = '+918884230972';
               const message = encodeURIComponent(
                 `Hi! I am interested in buying ${product.name}`,
               );
