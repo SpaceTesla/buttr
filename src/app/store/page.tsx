@@ -54,10 +54,6 @@ const products: Product[] = [
 ];
 
 export default function StorePage() {
-  const featuredProducts = products
-    .filter((product) => product.isBestseller)
-    .slice(0, 3);
-
   return (
     <div className="bg-white pt-[5rem]">
       {/* Hero Section */}
@@ -80,7 +76,7 @@ export default function StorePage() {
         {/* Sort Controls */}
         {/*<div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">*/}
         {/*  <div className="text-lg font-medium">*/}
-        {/*    All Products{' '}*/}
+        {/*    All Products*/}
         {/*    <span className="text-base text-gray-500">*/}
         {/*      ({products.length} items)*/}
         {/*    </span>*/}

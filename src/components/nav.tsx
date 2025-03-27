@@ -16,9 +16,9 @@ const Nav = () => {
   return (
     <div className="fixed z-50 flex h-20 w-full items-center justify-between bg-buttr-green px-6 shadow-sm md:bg-white">
       {/* Decorative circle - responsive positioning */}
-      <div className="absolute -left-[280px] -top-[440px] z-10 hidden h-[560px] w-[560px] rounded-full bg-buttr-green md:block"></div>
+      <div className="absolute -left-[280px] -top-[440px] z-10 hidden h-[560px] w-[560px] rounded-full bg-buttr-green/60 md:block"></div>
 
-      <div className="nav-left relative z-30">
+      <div className="nav-left relative z-30 drop-shadow-2xl">
         <Link href="/">
           <Image src={Logo} alt="logo" width={128} height={128} />
         </Link>
