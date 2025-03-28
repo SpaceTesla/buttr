@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Paper from '../../public/paper.png';
+import Paper from '../../public/paper.webp';
 import Socials from '@/components/socials';
 import Point from '@/components/point';
 import Link from 'next/link';
@@ -116,6 +116,11 @@ export default function Home() {
                   height={800}
                   className="object-contain"
                   priority={true}
+                  quality={75}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  loading="eager"
                 />
                 <div
                   className={

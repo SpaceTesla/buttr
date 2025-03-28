@@ -1,5 +1,5 @@
 import React from 'react';
-import Pattern from '../../public/pattern.png';
+import Pattern from '../../public/pattern.webp';
 import Image from 'next/image';
 
 const Design = () => {
@@ -12,10 +12,15 @@ const Design = () => {
       >
         <Image
           src={Pattern}
-          alt="BUTTR Paper Stack"
+          alt="BUTTR Paper Pattern"
           width={800}
           height={800}
           className="object-contain"
+          loading="lazy"
+          quality={60}
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+          sizes="(max-width: 1024px) 0vw, 560px"
         />
       </div>
     </>
