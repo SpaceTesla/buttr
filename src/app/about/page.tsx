@@ -332,10 +332,10 @@ export default function AboutPage() {
                   Collection & Sorting
                 </h3>
                 <p className="text-gray-700">
-                  We collect post-consumer waste paper from our network of
-                  recycling partners. Each batch is carefully sorted to ensure
-                  quality and remove contaminants, diverting materials from
-                  landfills.
+                  We collect post consumer textile and paper waste from our
+                  network of recycling partners. Each batch is carefully sorted
+                  to ensure quality and remove contaminants, diverting materials
+                  from landfills.
                 </p>
               </div>
               <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
@@ -359,7 +359,7 @@ export default function AboutPage() {
                   Pulping & Cleaning
                 </h3>
                 <p className="text-gray-700">
-                  The sorted paper is transformed into pulp using our
+                  The sorted waste is transformed into pulp using our
                   energy-efficient process. We use eco-friendly cleaning agents
                   to remove inks and adhesives, ensuring a clean base for our
                   premium papers without the high costs typically associated
