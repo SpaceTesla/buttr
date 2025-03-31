@@ -4,6 +4,8 @@ import './globals.css';
 import Nav from '@/components/nav';
 import Design from '@/components/design';
 import ChatBot from '@/components/chat-bot';
+import Socials from '@/components/socials';
+import React from 'react';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -73,6 +75,8 @@ export default function RootLayout({
         <Design />
         {children}
         <ChatBot />
+        {/* Social Media Icons */}
+        <Socials />
       </body>
     </html>
   );

@@ -178,10 +178,10 @@ export default function Home() {
           <MobileClientLogos /> {/* Shows on mobile */}
         </div>
 
-        {/* Social Media Icons */}
-        <div className="pt-8">
-          <Socials />
-        </div>
+        {/*/!* Social Media Icons *!/*/}
+        {/*<div className="pt-8">*/}
+        {/*  <Socials />*/}
+        {/*</div>*/}
       </main>
     </>
   );
