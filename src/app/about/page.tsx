@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="h-[calc(100vh-5rem)] bg-white pt-[5rem]">
+    <main className="min-h-[calc(100vh-5rem)] bg-white pt-[5rem]">
       {/* Hero Section */}
       <section className="relative">
         <div className="absolute inset-0 z-0 bg-buttr-green/10"></div>
@@ -487,6 +487,58 @@ export default function AboutPage() {
           Shop Our Products
         </a>
       </section>
-    </div>
+
+      {/* Disclaimer */}
+      <section className="container mx-auto px-4 py-8">
+        <div className="mx-auto max-w-4xl">
+          <h3 className="mb-4 text-center text-xs font-semibold">Disclaimer</h3>
+          <p className="text-justify text-[6px] text-gray-600">
+            The information contained in this website is for general information
+            purposes only. The information is provided by Code Effort Pvt Ltd
+            and while we endeavour to keep the information up to date and
+            correct, we make no representations or warranties of any kind,
+            express or implied, about the completeness, accuracy, reliability,
+            suitability, or availability with respect to the website or the
+            information, products, services, or related graphics contained on
+            the website for any purpose. Any reliance you place on such
+            information is therefore strictly at your own risk.
+            <br />
+            <br />
+            You may not, except with our express written permission, distribute
+            or commercially exploit the content. Nor may you transmit it or
+            store it in any other website or other form of electronic retrieval
+            system.
+            <br />
+            <br />
+            Any redistribution or reproduction of part or all of the contents in
+            any form is prohibited other than the following:
+            <br />
+            You may print or download to a local hard disk extracts for your
+            personal and non-commercial use only.
+            <br />
+            <br />
+            Unauthorized use of this website may give rise to a claim for
+            damages and/or be a criminal offence.
+            <br />
+            <br />
+            From time to time this website may also include links to other
+            websites. These links are provided for your convenience to provide
+            further information. They do not signify that Code Effort Pvt Ltd
+            endorse the website(s). Code Effort Pvt Ltd has no responsibility
+            for the content of the linked website(s).
+            <br />
+            <br />
+            Applicable Law and Jurisdiction of this WEBSITE are governed by and
+            to be interpreted in accordance with laws of India, without regard
+            to the choice or conflicts of law provisions of any jurisdiction.
+            The user/site visitor agrees that in the event of any dispute
+            arising in relation to this Disclaimer or any dispute arising in
+            relation to the website whether in contract or tort or otherwise, to
+            submit to the jurisdiction of the courts located at Noida only for
+            the resolution of all such disputes.
+          </p>
+        </div>
+      </section>
+    </main>
   );
 }

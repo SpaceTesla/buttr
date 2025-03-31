@@ -72,7 +72,7 @@ export default function Home() {
           }
         `}
       </Script>
-      <main className="h-[calc(100vh-5rem)] overflow-x-clip pt-[5rem]">
+      <main className="min-h-[calc(100vh-5rem)] overflow-x-clip pt-[5rem]">
         <h1 className="sr-only">
           BUTTR Sustainable Papers - 100% Recycled, Tree-Free Papers
         </h1>

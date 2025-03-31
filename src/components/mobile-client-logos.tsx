@@ -5,7 +5,7 @@ import { InfiniteMovingCards } from './infinite-moving-cards';
 
 export default function MobileClientLogos() {
   return (
-    <div className="block w-screen py-6 pb-20 lg:hidden">
+    <div className="block w-screen py-6 lg:hidden">
       <h3 className="mb-3 text-center text-lg font-bold">Trusted Partners</h3>
       <div className="w-full overflow-hidden">
         <InfiniteMovingCards

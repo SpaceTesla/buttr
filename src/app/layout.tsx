@@ -75,8 +75,33 @@ export default function RootLayout({
         <Design />
         {children}
         <ChatBot />
-        {/* Social Media Icons */}
-        <Socials />
+        <footer className="mt-auto bg-primary/5 p-4">
+          <div className="container mx-auto">
+            <div className="flex flex-col">
+              <div className="flex justify-center">
+                <Socials />
+              </div>
+              <div className="flex justify-center space-x-6 p-4 text-sm text-gray-600">
+                <a
+                  href="/dummy.pdf"
+                  className="hover:text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Privacy Policy
+                </a>
+                <a
+                  href="/dummy.pdf"
+                  className="hover:text-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Terms & Conditions
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
