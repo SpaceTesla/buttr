@@ -3,6 +3,7 @@ import TwitterIcon from '../../public/socials/twitter.svg';
 import InstagramIcon from '../../public/socials/instagram.svg';
 import WhatsAppIcon from '../../public/socials/whatsapp.svg';
 import LinkedInIcon from '../../public/socials/linkedin.svg';
+import YoutubeIcon from '../../public/socials/youtube.svg';
 
 export const Logos = {
   Facebook: FacebookIcon,
@@ -10,4 +11,5 @@ export const Logos = {
   Instagram: InstagramIcon,
   WhatsApp: WhatsAppIcon,
   LinkedIn: LinkedInIcon,
+  Youtube: YoutubeIcon,
 };

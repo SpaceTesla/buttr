@@ -70,6 +70,21 @@ const Socials = () => {
           />
         </a>
       </Button>
+      <Button variant={'link'} className={'m-0 p-0'} asChild>
+        <a
+          href="https://www.youtube.com/@BUTTRPaper"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={Logos.Youtube}
+            alt={'youtube'}
+            className={'rounded-full bg-buttr-yellow'}
+            width={32}
+            height={32}
+          />
+        </a>
+      </Button>
     </div>
   );
 };

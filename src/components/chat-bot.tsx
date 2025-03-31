@@ -121,13 +121,15 @@ export default function ChatBot() {
             width={60}
             height={60}
             alt={'whatsapp'}
+            className={'rounded-full bg-white'}
           />
         </button>
 
         {/* AI Chat Button */}
+        {/* Make this flex to enable the button again */}
         <button
           onClick={() => setIsOpen(true)}
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#2f2f2f] text-white shadow-lg hover:bg-[#4a4a4a]"
+          className="hidden h-14 w-14 items-center justify-center rounded-full bg-[#2f2f2f] text-white shadow-lg hover:bg-[#4a4a4a]"
           aria-label="Open AI chat"
         >
           <MessageCircle className="h-8 w-8" />
