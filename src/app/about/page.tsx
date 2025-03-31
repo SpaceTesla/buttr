@@ -323,7 +323,7 @@ export default function AboutPage() {
         </p>
         <div className="relative">
           {/* Process timeline */}
-          <div className="absolute left-1/2 -z-10 hidden h-full w-1 -translate-x-1/2 transform bg-buttr-green/20 md:block"></div>
+          <div className="absolute left-1/2 z-10 hidden h-full w-1 -translate-x-1/2 transform bg-buttr-green/20 md:block"></div>
           <div className="space-y-12">
             {/* Process 1 */}
             <div className="flex flex-col items-center md:flex-row">
@@ -339,7 +339,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
+                <div className="z-20 flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   1
                 </div>
               </div>
@@ -350,7 +350,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center md:flex-row">
               <div className="hidden md:order-1 md:block md:w-1/2"></div>
               <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
+                <div className="z-20 flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   2
                 </div>
               </div>
@@ -383,7 +383,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
+                <div className="z-20 flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   3
                 </div>
               </div>
@@ -394,7 +394,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center md:flex-row">
               <div className="hidden md:order-1 md:block md:w-1/2"></div>
               <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
+                <div className="z-20 flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   4
                 </div>
               </div>
@@ -427,7 +427,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="order-1 my-4 flex justify-center md:order-2 md:my-0 md:w-12">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
+                <div className="z-20 flex h-10 w-10 items-center justify-center rounded-full bg-buttr-green font-bold text-white">
                   5
                 </div>
               </div>
@@ -486,58 +486,6 @@ export default function AboutPage() {
         >
           Shop Our Products
         </a>
-      </section>
-
-      {/* Disclaimer */}
-      <section className="container mx-auto px-4 py-8">
-        <div className="mx-auto max-w-4xl">
-          <h3 className="mb-4 text-center text-xs font-semibold">Disclaimer</h3>
-          <p className="text-justify text-[6px] text-gray-600">
-            The information contained in this website is for general information
-            purposes only. The information is provided by Code Effort Pvt Ltd
-            and while we endeavour to keep the information up to date and
-            correct, we make no representations or warranties of any kind,
-            express or implied, about the completeness, accuracy, reliability,
-            suitability, or availability with respect to the website or the
-            information, products, services, or related graphics contained on
-            the website for any purpose. Any reliance you place on such
-            information is therefore strictly at your own risk.
-            <br />
-            <br />
-            You may not, except with our express written permission, distribute
-            or commercially exploit the content. Nor may you transmit it or
-            store it in any other website or other form of electronic retrieval
-            system.
-            <br />
-            <br />
-            Any redistribution or reproduction of part or all of the contents in
-            any form is prohibited other than the following:
-            <br />
-            You may print or download to a local hard disk extracts for your
-            personal and non-commercial use only.
-            <br />
-            <br />
-            Unauthorized use of this website may give rise to a claim for
-            damages and/or be a criminal offence.
-            <br />
-            <br />
-            From time to time this website may also include links to other
-            websites. These links are provided for your convenience to provide
-            further information. They do not signify that Code Effort Pvt Ltd
-            endorse the website(s). Code Effort Pvt Ltd has no responsibility
-            for the content of the linked website(s).
-            <br />
-            <br />
-            Applicable Law and Jurisdiction of this WEBSITE are governed by and
-            to be interpreted in accordance with laws of India, without regard
-            to the choice or conflicts of law provisions of any jurisdiction.
-            The user/site visitor agrees that in the event of any dispute
-            arising in relation to this Disclaimer or any dispute arising in
-            relation to the website whether in contract or tort or otherwise, to
-            submit to the jurisdiction of the courts located at Noida only for
-            the resolution of all such disputes.
-          </p>
-        </div>
       </section>
     </main>
   );
