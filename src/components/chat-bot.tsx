@@ -32,7 +32,7 @@ export default function ChatBot() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // WhatsApp number - Replace with your actual WhatsApp business number
-  const whatsappNumber = '+918884230972';
+  const whatsappNumber = '+919599634566';
 
   useEffect(() => {
     scrollToBottom();

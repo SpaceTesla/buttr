@@ -123,7 +123,7 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
           <button
             className="inline-flex items-center rounded-md bg-buttr-green px-3 py-2 font-medium text-white transition-colors hover:bg-buttr-green/90"
             onClick={() => {
-              const whatsappNumber = '+918884230972';
+              const whatsappNumber = '+919599634566';
               const message = encodeURIComponent(
                 `Hi! I am interested in buying ${product.name}`,
               );
