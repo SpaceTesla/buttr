@@ -72,13 +72,13 @@ export default function Home() {
           }
         `}
       </Script>
-      <main className="min-h-[calc(100vh-5rem)] overflow-x-clip pt-[5rem]">
+      <main className="min-h-[calc(100vh)] overflow-x-clip pt-[5rem]">
         <h1 className="sr-only">
           BUTTR Sustainable Papers - 100% Recycled, Tree-Free Papers
         </h1>
-        <div className="grid h-full min-h-full lg:grid-cols-9">
+        <div className="grid min-h-full lg:grid-cols-9">
           {/* Left column - Benefits */}
-          <div className="col-span-3 flex h-full flex-col items-start justify-center gap-8 py-8 pl-4 pr-4 lg:pr-16">
+          <div className="col-span-3 flex h-full flex-col items-start justify-center gap-8 py-8 pl-4 pr-4 lg:absolute lg:left-0 lg:top-1/2 lg:w-1/3 lg:-translate-y-1/2 lg:pr-16">
             <Point
               icon={'/gifs/water-saving.gif'}
               heading={'Saving Water'}
