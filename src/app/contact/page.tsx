@@ -23,7 +23,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Information and Form */}
       <section className="container mx-auto px-4 py-16">
         <div className="grid gap-12 md:grid-cols-2">
@@ -131,7 +130,6 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
@@ -378,9 +376,9 @@ export default function ContactPage() {
           <h3 className="mb-4 text-center text-xs font-semibold">Disclaimer</h3>
           <p className="text-justify text-[6px] text-gray-600">
             The information contained in this website is for general information
-            purposes only. The information is provided by Code Effort Pvt Ltd
-            and while we endeavour to keep the information up to date and
-            correct, we make no representations or warranties of any kind,
+            purposes only. The information is provided by Decorearth Private
+            Limited and while we endeavour to keep the information up to date
+            and correct, we make no representations or warranties of any kind,
             express or implied, about the completeness, accuracy, reliability,
             suitability, or availability with respect to the website or the
             information, products, services, or related graphics contained on
@@ -407,9 +405,9 @@ export default function ContactPage() {
             <br />
             From time to time this website may also include links to other
             websites. These links are provided for your convenience to provide
-            further information. They do not signify that Code Effort Pvt Ltd
-            endorse the website(s). Code Effort Pvt Ltd has no responsibility
-            for the content of the linked website(s).
+            further information. They do not signify that Decorearth Private
+            Limited endorse the website(s). Decorearth Private Limited has no
+            responsibility for the content of the linked website(s).
             <br />
             <br />
             Applicable Law and Jurisdiction of this WEBSITE are governed by and
