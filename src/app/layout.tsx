@@ -83,7 +83,7 @@ export default function RootLayout({
               </div>
               <div className="flex justify-center space-x-6 p-4 text-sm text-gray-600">
                 <a
-                  href="/dummy.pdf"
+                  href="/docs/Privacy%20Policy.pdf"
                   className="hover:text-primary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -91,7 +91,7 @@ export default function RootLayout({
                   Privacy Policy
                 </a>
                 <a
-                  href="/dummy.pdf"
+                  href="/docs/Terms%20and%20Conditions.pdf"
                   className="hover:text-primary"
                   target="_blank"
                   rel="noopener noreferrer"
