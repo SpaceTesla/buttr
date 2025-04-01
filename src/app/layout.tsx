@@ -75,13 +75,13 @@ export default function RootLayout({
         <Design />
         {children}
         <ChatBot />
-        <footer className="mt-auto bg-primary/5 p-4">
+        <footer className="mt-auto bg-primary/5">
           <div className="container mx-auto">
             <div className="flex flex-col">
               <div className="flex justify-center">
                 <Socials />
               </div>
-              <div className="flex justify-center space-x-6 p-4 text-sm text-gray-600">
+              <div className="flex justify-center space-x-4 p-4 pt-0 text-sm text-gray-600">
                 <a
                   href="/docs/Privacy%20Policy.pdf"
                   className="hover:text-primary"
