@@ -7,8 +7,9 @@ import React from 'react';
 import ClientLogos from '@/components/client-logos';
 import MobileClientLogos from '@/components/mobile-client-logos';
 import Script from 'next/script';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'BUTTR | Sustainable Tree-Free Recycled Papers',
   description:
     '100% Recycled, Tree-Free, Uber-Smooth, FSC Certified Premium Papers for High-Speed Printing and Writing. Eco-friendly paper solutions saving trees, water, and reducing carbon footprint.',
@@ -18,7 +19,7 @@ export const metadata = {
     title: 'BUTTR | Sustainable Tree-Free Recycled Papers',
     description:
       '100% Recycled, Tree-Free, Uber-Smooth, FSC Certified Premium Papers for High-Speed Printing and Writing.',
-    url: 'https://buttrpaper.in',
+    url: 'https://www.buttrpaper.com',
     images: [
       {
         url: '/images/og-img.png',
@@ -37,7 +38,7 @@ export const metadata = {
     images: ['/images/og-img.png'],
   },
   alternates: {
-    canonical: 'https://buttrpaper.in',
+    canonical: 'https://www.buttrpaper.com',
   },
 };
 
@@ -49,27 +50,40 @@ export default function Home() {
     <>
       <Script id="product-schema" type="application/ld+json">
         {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "BUTTR Sustainable Papers",
-            "url": "https://buttrpaper.in",
-            "logo": "https://buttrpaper.in/images/logo.png",
-            "description": "100% Recycled, Tree-Free, Uber-Smooth, FSC Certified Premium Papers for High-Speed Printing and Writing.",
-            "sameAs": [
-              "https://facebook.com/buttrpaper",
-              "https://instagram.com/buttrpaper",
-              "https://linkedin.com/company/buttrpaper"
-            ],
-            "offers": {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Product",
-                "name": "BUTTR Sustainable Paper",
-                "description": "100% Recycled, Tree-Free, Eco-friendly Premium Papers"
-              }
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "BUTTR Sustainable Paper",
+          "description": "100% Recycled, Tree-Free, Uber-Smooth, FSC Certified Premium Papers for eco-friendly printing and writing.",
+          "brand": {
+            "@type": "Brand",
+            "name": "BUTTR"
+          },
+          "category": "Eco-Friendly Office Supplies",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "price": "12.99",
+            "priceCurrency": "INR"
+          },
+          "keywords": "sustainable paper, tree-free paper, recycled paper, eco-friendly paper, FSC certified paper, carbon neutral paper, water-saving paper",
+          "material": "100% Recycled Materials",
+          "isSustainableResourceManagement": true,
+          "image": "https://www.buttrpaper.com/images/og-img.png",
+          "url": "https://www.buttrpaper.com",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Water Saving",
+              "value": "70 litres per ream"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Carbon Offset",
+              "value": "200 Kgs per ream"
             }
-          }
+          ]
+        }
         `}
       </Script>
       <main className="min-h-[calc(100vh)] overflow-x-clip pt-[5rem]">
@@ -177,11 +191,6 @@ export default function Home() {
           <ClientLogos /> {/* Shows on desktop */}
           <MobileClientLogos /> {/* Shows on mobile */}
         </div>
-
-        {/*/!* Social Media Icons *!/*/}
-        {/*<div className="pt-8">*/}
-        {/*  <Socials />*/}
-        {/*</div>*/}
       </main>
     </>
   );

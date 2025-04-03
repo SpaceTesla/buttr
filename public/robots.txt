@@ -1,14 +1,16 @@
-# robots.txt for BUTTR Sustainable Papers
-
+# *
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /api
 
-# Disallow admin areas
-Disallow: /admin/
-Disallow: /dashboard/
+# Googlebot
+User-agent: Googlebot
+Allow: /
 
-# Sitemap location
-Sitemap: https://buttrpaper.in/sitemap.xml
+# Host
+Host: https://www.buttrpaper.com
 
-# Crawl delay to prevent overwhelming the server
-Crawl-delay: 10
+# Sitemaps
+Sitemap: https://www.buttrpaper.com/sitemap.xml
