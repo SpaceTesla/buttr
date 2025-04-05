@@ -129,7 +129,7 @@ export default function ChatBot() {
         {/* Make this flex to enable the button again */}
         <button
           onClick={() => setIsOpen(true)}
-          className="hidden h-14 w-14 items-center justify-center rounded-full bg-[#2f2f2f] text-white shadow-lg hover:bg-[#4a4a4a]"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#2f2f2f] text-white shadow-lg hover:bg-[#4a4a4a]"
           aria-label="Open AI chat"
         >
           <MessageCircle className="h-8 w-8" />
