@@ -7,6 +7,7 @@ import ChatBot from '@/components/chat-bot';
 import Socials from '@/components/socials';
 import React from 'react';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -169,6 +170,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
