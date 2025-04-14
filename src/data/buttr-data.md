@@ -21,9 +21,9 @@ This central philosophy guides BUTTR's mission to protect all life forms through
 - **Water Saved**: Over 250 billion gallons
 - **Environmental Protection**: Prevented microplastics from polluting water systems
 
-## Products Made from Recycled Cigarette Butts
+## Products Made from Recycled Single-Use Waste
 
-BUTTR transforms cigarette waste into various sustainable products including:
+BUTTR transforms single-use waste into various sustainable products including:
 
 - Sustainable papers
 - Textiles
@@ -50,7 +50,7 @@ We provide 100% traceability, offer last-mile delivery, and save 15% of paper pr
 
 ### What makes BUTTR sustainable?
 
-We recycle cigarette butts - the world's most littered single-use plastic - and transform them into useful products, preventing microplastics from entering water systems.
+We recycle single-use waste materials - some of the world's most littered items - and transform them into useful products, preventing microplastics from entering water systems.
 
 ### Where is BUTTR made?
 
