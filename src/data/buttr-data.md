@@ -2,9 +2,11 @@
 
 ## About BUTTR
 
-BUTTR is an innovative company founded by Naman Gupta that tackles one of the world's most pervasive pollution problems: cigarette butts. These discarded items are the world's most littered single-use plastic, containing microplastics that take over 10 years to decompose and pose serious threats to water bodies and ecosystems.
+BUTTR is an innovative company founded by Naman Gupta that tackles one of the most pervasive pollution problems: single-use waste.
+The company transforms discarded materials into sustainable products through an innovative recycling process.
 
-The company collects cigarette butts and transforms them into sustainable products through an innovative recycling process. This not only prevents harmful waste from entering landfills and waterways but also creates valuable, eco-friendly products.
+The company collects single-use waste and transforms them into sustainable products through an innovative recycling process.
+This not only prevents harmful waste from entering landfills and waterways but also creates valuable, eco-friendly products.
 
 "अयं बन्धुरयं नेति गणना लघुचेतसाम् । उदारचरितानां तु वसुधैव कुटुम्बकम् ॥"
 — Mahopanishad, Verse 6.72
@@ -32,7 +34,7 @@ BUTTR Sustainable Papers are 100% recycled, uber-smooth paper sheets precisely c
 
 ## How to Contribute
 
-If you know smokers or have cigarette butts at home or office, you can collect them and send them to BUTTR for recycling. This small action contributes to a larger environmental solution.
+You can collect single-use waste them and send them to BUTTR for recycling. This small action contributes to a larger environmental solution.
 
 We all have a role to play in addressing this environmental challenge:
 
@@ -60,7 +62,8 @@ Yes, we offer discounts for orders over $100. Contact our sales team for details
 
 ### What environmental issues does BUTTR address?
 
-Cigarette butts contain microplastics that take over 10 years to decompose and pose serious threats to water bodies and ecosystems. By recycling them, we prevent this pollution while creating sustainable alternatives to traditional products.
+Single-use waste items contain microplastics that take over 10 years to decompose and pose serious threats to water bodies and ecosystems.
+By recycling these materials, we prevent pollution while creating sustainable alternatives to traditional products.
 
 ### Do you offer services for businesses?
 
