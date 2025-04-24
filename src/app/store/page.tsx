@@ -1,6 +1,6 @@
 // src/app/store/page.tsx
 import Link from 'next/link';
-import { ChevronDown, Leaf, Recycle, Award } from 'lucide-react';
+import { ChevronDown, Leaf, Recycle, Award, Paintbrush } from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
 import fs from 'fs';
 import path from 'path';
@@ -112,12 +112,21 @@ export default function StorePage() {
           Our paper experts are here to help you find the perfect sustainable
           paper solution for your needs.
         </p>
-        <Link
-          href="/contact"
-          className="inline-block rounded-md bg-primary px-8 py-3 font-medium text-white transition-colors hover:bg-primary/90"
-        >
-          Contact Us
-        </Link>
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-medium text-white transition-colors hover:bg-primary/90"
+          >
+            Contact Us
+          </Link>
+          <Link
+            href="/canvas"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-transparent px-8 py-3 font-medium text-primary ring-1 ring-primary transition-all hover:bg-primary hover:text-white"
+          >
+            <Paintbrush className="h-5 w-5" />
+            Draw & Get 10% Off
+          </Link>
+        </div>
       </section>
     </div>
   );

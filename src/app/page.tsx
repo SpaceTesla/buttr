@@ -155,7 +155,7 @@ export default function Home() {
                       }}
                       className="flex flex-col items-center gap-4"
                     >
-                      <Link
+                      {/* <Link
                         href={'/canvas'}
                         aria-label="Draw and get a 10% discount"
                         className={
@@ -163,7 +163,7 @@ export default function Home() {
                         }
                       >
                         Draw & Save 10%
-                      </Link>
+                      </Link> */}
                       <Link
                         href={'/about'}
                         aria-label="Learn more about BUTTR sustainable papers"
