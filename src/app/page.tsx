@@ -156,6 +156,15 @@ export default function Home() {
                       className="flex flex-col items-center gap-4"
                     >
                       <Link
+                        href={'/canvas'}
+                        aria-label="Draw and get a 10% discount"
+                        className={
+                          'text-[1em] font-black uppercase text-buttr-green transition hover:scale-110 hover:drop-shadow md:text-[1.25rem]'
+                        }
+                      >
+                        Draw & Save 10%
+                      </Link>
+                      <Link
                         href={'/about'}
                         aria-label="Learn more about BUTTR sustainable papers"
                         className={
