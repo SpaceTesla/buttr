@@ -453,20 +453,16 @@ export default function AboutPage() {
 
           <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-3">
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">10B+</div>
-              <p className="text-gray-700">Cigarette Butts Recycled</p>
+              <div className="mb-2 text-4xl font-bold text-primary">100K+</div>
+              <p className="text-gray-700">Trees Saved</p>
             </div>
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">250B+</div>
-              <p className="text-gray-700">Gallons of Water Saved</p>
+              <div className="mb-2 text-4xl font-bold text-primary">7M+</div>
+              <p className="text-gray-700">Litres of Water Saved</p>
             </div>
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">
-                <Recycle className="mx-auto h-12 w-12" />
-              </div>
-              <p className="text-gray-700">
-                Microplastics Kept Out of Water Systems
-              </p>
+              <div className="mb-2 text-4xl font-bold text-primary">10.5M+</div>
+              <p className="text-gray-700">KGs Carbon Footprint Offset</p>
             </div>
           </div>
         </div>
