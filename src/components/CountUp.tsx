@@ -28,6 +28,7 @@ const CountUp: React.FC<CountUpProps> = ({
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement | null>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const animationRef = useRef<number | null>(null);
 
   function getScrambleRange(end: number, compact: boolean, decimals: number) {
     if (compact) {
@@ -62,8 +63,8 @@ const CountUp: React.FC<CountUpProps> = ({
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+
     let observer: IntersectionObserver;
-    let animationFrame: number;
     let startTimestamp: number | null = null;
     const [minScramble, maxScramble] = getScrambleRange(end, compact, decimals);
     const compactInfo = compact ? getCompactValue(end, decimals) : null;
@@ -74,36 +75,58 @@ const CountUp: React.FC<CountUpProps> = ({
       const progress = Math.min(elapsed / duration, 1);
 
       if (progress < 1) {
-        // Scramble: show random number in the calculated range
         const scramble = Math.random() * (maxScramble - minScramble) + minScramble;
         setCount(scramble);
-        animationFrame = requestAnimationFrame(animate);
+        animationRef.current = requestAnimationFrame(animate);
       } else {
-        // Snap to final value
+        // Ensure we always reach the final value
         if (compact && compactInfo) {
           setCount(compactInfo.value);
         } else {
           setCount(end);
         }
+        animationRef.current = null;
+      }
+    };
+
+    const startAnimation = () => {
+      if (!hasAnimated) {
+        setHasAnimated(true);
+        // Small delay to ensure proper initialization
+        setTimeout(() => {
+          startTimestamp = null;
+          animationRef.current = requestAnimationFrame(animate);
+        }, 100);
       }
     };
 
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
-      if (entries[0].isIntersecting && !hasAnimated) {
-        setHasAnimated(true);
-        requestAnimationFrame(animate);
+      if (entries[0].isIntersecting) {
+        startAnimation();
         observer.disconnect();
       }
     };
 
-    observer = new window.IntersectionObserver(handleIntersect, {
-      threshold: 0.1,
-    });
-    observer.observe(node);
+    // Check if element is already visible
+    const rect = node.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isVisible) {
+      // Element is already visible, start animation immediately
+      startAnimation();
+    } else {
+      // Set up intersection observer
+      observer = new window.IntersectionObserver(handleIntersect, {
+        threshold: 0.1,
+      });
+      observer.observe(node);
+    }
 
     return () => {
       if (observer) observer.disconnect();
-      if (animationFrame) cancelAnimationFrame(animationFrame);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
     // eslint-disable-next-line
   }, [end, duration, hasAnimated, compact, decimals]);
