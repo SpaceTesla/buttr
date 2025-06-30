@@ -454,19 +454,40 @@ export default function AboutPage() {
 
           <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-3">
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">
+              <div className="mb-2 text-6xl font-black text-primary" style={{
+                backgroundImage: 'url(/textures/tree.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 <CountUp end={100000} decimals={0} compact />
               </div>
               <p className="text-gray-700">Trees Saved</p>
             </div>
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">
+              <div className="mb-2 text-6xl font-black text-primary" style={{
+                backgroundImage: 'url(/textures/water.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 <CountUp end={7000000} decimals={0} compact />
               </div>
               <p className="text-gray-700">Litres of Water Saved</p>
             </div>
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">
+              <div className="mb-2 text-6xl font-black text-primary" style={{
+                backgroundImage: 'url(/textures/carbon.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 <CountUp end={10500000} decimals={1} compact />
               </div>
               <p className="text-gray-700">KGs Carbon Footprint Offset</p>
