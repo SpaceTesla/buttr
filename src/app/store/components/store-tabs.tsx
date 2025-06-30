@@ -5,10 +5,11 @@ import { ProductCard } from '@/components/product-card';
 import { Product } from '@/types/product';
 
 interface StoreTabsProps {
+  papers: Product[];
   products: Product[];
 }
 
-export function StoreTabs({ products }: StoreTabsProps) {
+export function StoreTabs({ papers, products }: StoreTabsProps) {
   const [activeTab, setActiveTab] = useState<'papers' | 'products'>('papers');
 
   return (
@@ -45,8 +46,8 @@ export function StoreTabs({ products }: StoreTabsProps) {
           <div>
             <h2 className="mb-6 text-2xl font-bold text-gray-900">Sustainable Papers</h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+              {papers.map((paper) => (
+                <ProductCard key={paper.id} product={paper} />
               ))}
             </div>
           </div>
@@ -54,7 +55,7 @@ export function StoreTabs({ products }: StoreTabsProps) {
 
         {activeTab === 'products' && (
           <div>
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">Other Products</h2>
+            <h2 className="mb-6 text-2xl font-bold text-gray-900">Product Kits</h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {products.map((product) => (
                 <ProductCard key={`product-${product.id}`} product={product} />

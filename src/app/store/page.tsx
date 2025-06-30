@@ -5,19 +5,19 @@ import { StoreTabs } from './components/store-tabs';
 import Link from 'next/link';
 import { ChevronDown, Leaf, Recycle, Award, Paintbrush } from 'lucide-react';
 
-// Get product data from file system
-const getProductData = () => {
+// Get paper data from file system
+const getPaperData = () => {
   try {
-    const productsDir = path.join(process.cwd(), 'public/paper');
-    const productFolders = fs.readdirSync(productsDir);
+    const papersDir = path.join(process.cwd(), 'public/paper');
+    const paperFolders = fs.readdirSync(papersDir);
 
-    return productFolders.map((folder, index) => {
-      const productDir = path.join(productsDir, folder);
+    return paperFolders.map((folder, index) => {
+      const paperDir = path.join(papersDir, folder);
       const images = fs
-        .readdirSync(productDir)
+        .readdirSync(paperDir)
         .map((image) => `/paper/${folder}/${image}`);
 
-      // Generate product data with images from folders
+      // Generate paper data with images from folders
       return {
         id: (index + 1).toString(),
         name: folder.replace(/[-_]/g, ' '), // Convert folder name to readable name
@@ -29,12 +29,45 @@ const getProductData = () => {
       };
     });
   } catch (error) {
+    console.error('Error reading paper folders:', error);
+    return [];
+  }
+};
+
+// Get product data from file system
+const getProductData = () => {
+  try {
+    const productsDir = path.join(process.cwd(), 'public/products');
+    const productFolders = fs.readdirSync(productsDir);
+
+    return productFolders.map((folder, index) => {
+      const productDir = path.join(productsDir, folder);
+      const images = fs
+        .readdirSync(productDir)
+        .map((image) => `/products/${folder}/${image}`);
+
+      // Generate product data with images from folders
+      return {
+        id: (index + 1).toString(),
+        name: folder.replace(/[-_]/g, ' '), // Convert folder name to readable name
+        category: 'Product Kit',
+        price: 29.99 + index * 5, // Example pricing
+        images: images,
+        tags: ['Educational', 'Fun', 'Creative'],
+        description: `Exciting ${folder.replace(/[-_]/g, ' ')} kit. Perfect for learning and creativity.`,
+      };
+    });
+  } catch (error) {
     console.error('Error reading product folders:', error);
     return [];
   }
 };
 
+const papers = getPaperData();
 const products = getProductData();
+
+// Combine all items for the store tabs
+const allItems = [...papers, ...products];
 
 export default function StorePage() {
   return (
@@ -44,11 +77,11 @@ export default function StorePage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-4 text-4xl font-bold md:text-5xl">
-              Our Products
+              Our Papers & Products
             </h1>
             <p className="text-lg text-gray-700">
               Shop our collection of 100% recycled, tree-free, premium quality
-              sustainable papers and products.
+              sustainable papers and exciting product kits.
             </p>
           </div>
         </div>
@@ -56,7 +89,7 @@ export default function StorePage() {
 
       {/* Main Store Section */}
       <section className="container mx-auto px-4 py-12">
-        <StoreTabs products={products} />
+        <StoreTabs papers={papers} products={products} />
       </section>
 
       {/* Sustainability Commitment */}
