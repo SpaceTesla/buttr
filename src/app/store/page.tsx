@@ -1,20 +1,11 @@
 // src/app/store/page.tsx
-import Link from 'next/link';
-import { ChevronDown, Leaf, Recycle, Award, Paintbrush } from 'lucide-react';
-import { ProductCard } from '@/components/product-card';
 import fs from 'fs';
 import path from 'path';
-
-export const metadata = {
-  title: 'Store | BUTTR Sustainable Papers',
-  description:
-    'Shop our collection of 100% recycled, tree-free, premium quality sustainable papers.',
-};
+import { StoreTabs } from './components/store-tabs';
+import Link from 'next/link';
+import { ChevronDown, Leaf, Recycle, Award, Paintbrush } from 'lucide-react';
 
 // Get product data from file system
-// In src/app/store/page.tsx, modify the getProductData function
-// by removing the rating property
-
 const getProductData = () => {
   try {
     const productsDir = path.join(process.cwd(), 'public/paper');
@@ -57,7 +48,7 @@ export default function StorePage() {
             </h1>
             <p className="text-lg text-gray-700">
               Shop our collection of 100% recycled, tree-free, premium quality
-              sustainable papers.
+              sustainable papers and products.
             </p>
           </div>
         </div>
@@ -65,12 +56,7 @@ export default function StorePage() {
 
       {/* Main Store Section */}
       <section className="container mx-auto px-4 py-12">
-        {/* Products */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        <StoreTabs products={products} />
       </section>
 
       {/* Sustainability Commitment */}
