@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { CheckCircle, Leaf, Recycle, Award, Printer } from 'lucide-react';
 import { InfiniteMovingCards } from '@/components/infinite-moving-cards';
+import CountUp from '@/components/CountUp';
 
 export const metadata = {
   title: 'About Us | BUTTR Sustainable Papers',
@@ -453,15 +454,21 @@ export default function AboutPage() {
 
           <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-3">
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">100K+</div>
+              <div className="mb-2 text-4xl font-bold text-primary">
+                <CountUp end={100000} decimals={0} compact />
+              </div>
               <p className="text-gray-700">Trees Saved</p>
             </div>
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">7M+</div>
+              <div className="mb-2 text-4xl font-bold text-primary">
+                <CountUp end={7000000} decimals={0} compact />
+              </div>
               <p className="text-gray-700">Litres of Water Saved</p>
             </div>
             <div className="rounded-lg bg-white p-6 text-center shadow-sm">
-              <div className="mb-2 text-4xl font-bold text-primary">10.5M+</div>
+              <div className="mb-2 text-4xl font-bold text-primary">
+                <CountUp end={10500000} decimals={1} compact />
+              </div>
               <p className="text-gray-700">KGs Carbon Footprint Offset</p>
             </div>
           </div>
@@ -472,7 +479,7 @@ export default function AboutPage() {
       <section className="container mx-auto px-4 py-16 text-center">
         <h2 className="mb-6 text-3xl font-bold">Join Our Mission</h2>
         <p className="mx-auto mb-8 max-w-3xl text-lg">
-          By choosing BUTTR, you're not just buying paper—you're joining a
+          By choosing BUTTR, you're not just buying paper you're joining a
           movement toward a more sustainable future. Together, we can transform
           the paper industry and protect our planet for generations to come.
         </p>
