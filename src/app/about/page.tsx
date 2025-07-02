@@ -457,7 +457,7 @@ export default function AboutPage() {
               <div
                 className="mb-2 text-6xl font-black text-primary"
                 style={{
-                  backgroundImage: 'url(/textures/tree.webp)',
+                  backgroundImage: 'url(/textures/tree.png)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   WebkitBackgroundClip: 'text',
@@ -473,7 +473,7 @@ export default function AboutPage() {
               <div
                 className="mb-2 text-6xl font-black text-primary"
                 style={{
-                  backgroundImage: 'url(/textures/water.webp)',
+                  backgroundImage: 'url(/textures/water.jpg)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   WebkitBackgroundClip: 'text',
@@ -489,7 +489,7 @@ export default function AboutPage() {
               <div
                 className="mb-2 text-6xl font-black text-primary"
                 style={{
-                  backgroundImage: 'url(/textures/carbon.webp)',
+                  backgroundImage: 'url(/textures/carbon.jpg)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   WebkitBackgroundClip: 'text',
