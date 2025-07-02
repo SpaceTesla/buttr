@@ -42,9 +42,9 @@ export function StoreTabs({ papers, products }: StoreTabsProps) {
 
       {/* Tab Content */}
       <div className="space-y-8">
-        <h2 className="mb-6 text-2xl font-bold text-gray-900">
+        {/* <h2 className="mb-6 text-2xl font-bold text-gray-900">
           Our Products & Krafts
-        </h2>
+        </h2> */}
         {activeTab === 'papers' && (
           <div>
             {/* <h2 className="mb-6 text-2xl font-bold text-gray-900">
