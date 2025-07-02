@@ -35,16 +35,21 @@ export function StoreTabs({ papers, products }: StoreTabsProps) {
                 : 'text-gray-600 hover:text-gray-900'
             }`}
           >
-            Products
+            Krafts
           </button>
         </div>
       </div>
 
       {/* Tab Content */}
       <div className="space-y-8">
+        <h2 className="mb-6 text-2xl font-bold text-gray-900">
+          Our Products & Krafts
+        </h2>
         {activeTab === 'papers' && (
           <div>
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">Sustainable Papers</h2>
+            {/* <h2 className="mb-6 text-2xl font-bold text-gray-900">
+              Sustainable Papers
+            </h2> */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {papers.map((paper) => (
                 <ProductCard key={paper.id} product={paper} />
@@ -55,7 +60,9 @@ export function StoreTabs({ papers, products }: StoreTabsProps) {
 
         {activeTab === 'products' && (
           <div>
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">Product Kits</h2>
+            {/* <h2 className="mb-6 text-2xl font-bold text-gray-900">
+              Product Kits
+            </h2> */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {products.map((product) => (
                 <ProductCard key={`product-${product.id}`} product={product} />
@@ -66,4 +73,4 @@ export function StoreTabs({ papers, products }: StoreTabsProps) {
       </div>
     </>
   );
-} 
+}
