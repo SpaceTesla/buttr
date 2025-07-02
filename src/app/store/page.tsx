@@ -15,6 +15,7 @@ const getPaperData = () => {
       const paperDir = path.join(papersDir, folder);
       const images = fs
         .readdirSync(paperDir)
+        .sort()
         .map((image) => `/paper/${folder}/${image}`);
 
       // Generate paper data with images from folders
@@ -44,6 +45,7 @@ const getProductData = () => {
       const productDir = path.join(productsDir, folder);
       const images = fs
         .readdirSync(productDir)
+        .sort()
         .map((image) => `/products/${folder}/${image}`);
 
       // Generate product data with images from folders
